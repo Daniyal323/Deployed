@@ -1,0 +1,171 @@
+{% load static %}
+<nav class="navbar" id="navbar">
+    <div class="navbar-left">
+        <div class="logo-container">
+            <img src="{% static 'images/deployed-logo-blur.png' %}" alt="Deployed Logo" class="logo-image">
+            <div class="logo">Deployed</div>
+        </div>
+        <div class="theme-switcher">
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+    
+    <!-- Desktop Navigation -->
+    <div class="nav-links">
+        <div class="nav-item">
+            <a onclick="toggleDropdown(event, 'dropdown-what')">WHAT WE DO</a>
+            <div class="dropdown-fullscreen" id="dropdown-what">
+                <div class="dropdown-title">Capabilities</div>
+                <div class="capabilities-container">
+                    <div class="capabilities-column">
+                        <strong>Digital Transformation</strong>
+                        <ul>
+                            <li><a href="{% url 'main:web_development' %}">Web development</a></li>
+                            <li><a href="{% url 'main:services' %}">Mobile App Development</a></li>
+                            <li><a href="{% url 'main:services' %}">Custom Software Development</a></li>
+                            <li><a href="{% url 'main:services' %}">UX/UI Design</a></li>
+                        </ul>
+                        <strong>Business Applications</strong>
+                        <ul>
+                            <li><a href="{% url 'main:services' %}">D365 ERP</a></li>
+                            <li><a href="{% url 'main:services' %}">D365 CRM</a></li>
+                            <li><a href="{% url 'main:services' %}">Power Apps</a></li>
+                        </ul>
+                        <strong>Emerging Technologies</strong>
+                        <ul>
+                            <li><a href="{% url 'main:services' %}">Metaverse</a></li>
+                            <li><a href="{% url 'main:services' %}">Augmented reality</a></li>
+                            <li><a href="{% url 'main:services' %}">Blockchain & Cryptography</a></li>
+                        </ul>
+                        <strong>Data & AI</strong>
+                        <ul>
+                            <li><a href="{% url 'main:services' %}">Gen AI</a></li>
+                            <li><a href="{% url 'main:services' %}">Data Analytics</a></li>
+                        </ul>
+                        <strong><a href="{% url 'main:services' %}">Staff Augmentation</a></strong>
+                    </div>
+                    <div class="capabilities-column">
+                        <strong><a href="{% url 'main:services' %}">Quality Assurance</a></strong>
+                        <strong><a href="{% url 'main:services' %}">DevOps</a></strong>
+                        <strong><a href="{% url 'main:services' %}">Cybersecurity</a></strong>
+                        <strong><a href="{% url 'main:services' %}">SaaS</a></strong>
+                        <strong>E-commerce</strong>
+                        <ul>
+                            <li><a href="{% url 'main:services' %}">Design & Development</a></li>
+                            <li><a href="{% url 'main:services' %}">Maintenance & Support</a></li>
+                            <li><a href="{% url 'main:services' %}">Automation & Apps</a></li>
+                        </ul>
+                        <strong>Gaming</strong>
+                        <ul>
+                            <li><a href="{% url 'main:services' %}">Art & Design</a></li>
+                            <li><a href="{% url 'main:services' %}">Web3</a></li>
+                            <li><a href="{% url 'main:services' %}">AR/VR/XR</a></li>
+                        </ul>
+                        <strong>Cloud</strong>
+                        <ul>
+                            <li><a href="{% url 'main:services' %}">Cloud Application</a></li>
+                            <li><a href="{% url 'main:services' %}">Cloud Ops & Migration</a></li>
+                            <li><a href="{% url 'main:services' %}">Cloud maintenance & integration</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a onclick="toggleDropdown(event, 'dropdown-who')">WHO WE HELP</a>
+            <div class="dropdown-fullscreen" id="dropdown-who">
+                <div class="dropdown-title">Industries</div>
+                <div class="capabilities-container">
+                    <div class="capabilities-column">
+                        <strong>Travel & Hospitality</strong>
+                        <strong>Telecommunication</strong>
+                        <strong>Oil, Gas, and Energy</strong>
+                        <strong>E-commerce</strong>
+                        <strong>Healthcare & Pharmaceuticals</strong>
+                    </div>
+                    <div class="capabilities-column">
+                        <strong>Public Sector</strong>
+                        <strong>Retail & CGP</strong>
+                        <strong>Startups</strong>
+                        <strong>Banking & Fintech</strong>
+                        <strong>Gaming</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a onclick="toggleDropdown(event, 'dropdown-help')">WHO WE ARE</a>
+            <div class="dropdown-fullscreen" id="dropdown-help">
+                <div class="capabilities-container">
+                    <div class="capabilities-column">
+                        <strong><a href="{% url 'main:about' %}">About</a></strong>
+                        <strong><a href="{% url 'main:about' %}">Leadership</a></strong>
+                        <strong><a href="{% url 'main:about' %}">Geographies</a></strong>
+                        <strong><a href="{% url 'main:about' %}">Code of Conduct & Values</a></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a onclick="toggleDropdown(event, 'dropdown-how')">HOW WE DELIVER</a>
+            <div class="dropdown-fullscreen" id="dropdown-how">
+                <div class="capabilities-container">
+                    <div class="capabilities-column">
+                        <strong>Blogs</strong>
+                        <strong>Case Studies</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a onclick="toggleDropdown(event, 'dropdown-join')">JOIN DEPLOYED</a>
+            <div class="dropdown-fullscreen" id="dropdown-join">
+                <div class="capabilities-container">
+                    <div class="capabilities-column">
+                        <strong><a href="{% url 'main:careers' %}">Careers</a></strong>
+                        <strong><a href="{% url 'main:careers' %}">Culture</a></strong>
+                        <strong><a href="{% url 'main:careers' %}">Diversity, Equity, and Inclusion</a></strong>
+                        <strong><a href="{% url 'main:careers' %}">Employee Success</a></strong>
+                        <strong><a href="{% url 'main:careers' %}">Benefits</a></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Desktop CTA Buttons -->
+    <div class="nav-actions">
+        <a href="{% url 'main:careers' %}" class="btn primary">Explore Careers</a>
+        <a href="{% url 'main:contact' %}" class="btn secondary">Let's Talk Business</a>
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobileNav">
+    <!-- Mobile navigation content here - similar structure but adapted for mobile -->
+    <div class="mobile-nav-item">
+        <div class="mobile-nav-header" onclick="toggleMobileDropdown('mobile-what')">
+            <span>WHAT WE DO</span>
+            <span class="mobile-nav-arrow" id="mobile-what-arrow">▼</span>
+        </div>
+        <div class="mobile-nav-content" id="mobile-what">
+            <!-- Mobile dropdown content -->
+        </div>
+    </div>
+    
+    <!-- Mobile CTA Buttons -->
+    <div class="mobile-cta">
+        <a href="{% url 'main:careers' %}" class="btn primary">Explore Careers</a>
+        <a href="{% url 'main:contact' %}" class="btn secondary">Let's Talk Business</a>
+    </div>
+</div>

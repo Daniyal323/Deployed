@@ -1,0 +1,692 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | Deployed - Leading Software Company in USA{% endblock %}
+
+{% block content %}
+<!-- Add CSS for form messages -->
+<style>
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+#form-messages {
+    margin-bottom: 20px;
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.recaptcha-container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+</style>
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="hero-container">
+        <h1 class="hero-title">
+            Engineering<br>Next-Gen Software
+        </h1>
+        <p class="hero-description">
+            We help startups and enterprises deploy scalable, secure, and impactful digital products.
+        </p>
+        <a href="{% url 'main:contact' %}" class="hero-cta">
+            Let's Talk
+        </a>
+    </div>
+</section>
+
+<!-- FEATURED SECTION -->
+<section class="featured-section">
+    <canvas id="plexus-canvas"></canvas>
+    <div class="featured-content">
+        <div class="featured-left">
+            <div class="featured-subtitle">PIONEERING TRUST AND INNOVATION</div>
+            <h2 class="featured-title">Deployed's Achievements</h2>
+            <p class="featured-description">
+                We take pride in empowering businesses worldwide with innovative solutions. 
+                Deployed brings an unwavering commitment to excellence, backed by a global presence.
+            </p>
+            <a href="{% url 'main:contact' %}" class="featured-cta">Get In Touch</a>
+        </div>
+        <div class="featured-right">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Expert Developers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<!-- Replace the services section in home.html -->
+<section class="services-section">
+    <div class="services-container">
+        <div class="services-header">
+            <div class="services-subtitle">OUR SERVICES</div>
+            <h2 class="services-title">Transform Your Business</h2>
+        </div>
+        
+        <!-- First Row (Always Visible) -->
+        <div class="services-grid services-row" id="services-row-1">
+            <div class="service-card">
+                <img src="{% static 'services/web-development.png' %}" alt="Web Development" class="service-image">
+                <h3 class="service-name">Web Development</h3>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'services/mobile-app-development.webp' %}" alt="Mobile Apps" class="service-image">
+                <h3 class="service-name">Mobile Apps</h3>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'services/cloud-services.webp' %}" alt="Cloud Solutions" class="service-image">
+                <h3 class="service-name">Cloud Solutions</h3>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'services/AI.jpg' %}" alt="AI & Machine Learning" class="service-image">
+                <h3 class="service-name">Generative AI</h3>
+            </div>
+        </div>
+
+        <!-- Second Row (Hidden Initially) -->
+        <div class="services-grid services-row hidden" id="services-row-2">
+            <div class="service-card">
+                <img src="{% static 'services/dynamics365.jpg' %}" alt="Dynamics 365" class="service-image">
+                <h3 class="service-name">Dynamics 365</h3>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'services/data-analytics.webp' %}" alt="Data Analytics" class="service-image">
+                <h3 class="service-name">Data Analytics & Insights</h3>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'services/staff-augmentation.jpg' %}" alt="Staff Augmentation" class="service-image">
+                <h3 class="service-name">Staff Augmentation</h3>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'services/game-dev.jpg' %}" alt="Game Development" class="service-image">
+                <h3 class="service-name">Game Development</h3>
+            </div>
+        </div>
+
+        <!-- Third Row (Hidden Initially) -->
+      <div class="services-grid services-row hidden" id="services-row-3">
+        <div class="service-card">
+          <img src="{% static 'services/web3.jpg' %}" alt="Web3" class="service-image">
+          <h3 class="service-name">Web3 Gaming</h3>
+        </div>
+        <div class="service-card">
+                <img src="{% static 'services/AR:VR:XR.png' %}" alt="AR/VR/XR" class="service-image">
+          <h3 class="service-name">AR/VR/XR Gaming</h3>
+        </div>
+        <div class="service-card">
+                <img src="{% static 'services/gaming-art.webp' %}" alt="Game ART" class="service-image">
+          <h3 class="service-name">Gaming Art & Design</h3>
+        </div>
+        <div class="service-card">
+                <img src="{% static 'services/QA.avif' %}" alt="Quality Assurance" class="service-image">
+          <h3 class="service-name">Quality Assurance</h3>
+        </div>
+      </div>
+
+      <!-- Fourth Row (Hidden Initially) -->
+      <div class="services-grid services-row hidden" id="services-row-4">
+        <div class="service-card">
+            <img src="{% static 'services/e-commerce.jpg' %}" alt="E-Commerce" class="service-image">
+          <h3 class="service-name">E-commerce</h3>
+        </div>
+        <div class="service-card">
+            <img src="{% static 'services/UI:UX.jpeg' %}" alt="UI/UX" class="service-image">
+          <h3 class="service-name">UI/UX Design</h3>
+        </div>
+        <div class="service-card">
+            <img src="{% static 'services/devops.jpg' %}" alt="DevOps" class="service-image">
+          <h3 class="service-name">DevOps</h3>
+        </div>
+        <div class="service-card">
+            <img src="{% static 'services/Saas.jpg' %}" alt="Software As Service" class="service-image">
+          <h3 class="service-name">SaaS</h3>
+        </div>
+      </div>
+
+        <!-- Fifth Row (Hidden Initially) -->
+      <div class="services-grid services-row hidden" id="services-row-5">
+        <div class="service-card">
+            <img src="{% static 'services/metaverse.jpg' %}" alt="Metaverse" class="service-image">
+          <h3 class="service-name">Metaverse</h3>
+        </div>
+        <div class="service-card">
+            <img src="{% static 'services/cloud-migrations.jpg' %}" alt="Cloud Migrations" class="service-image">
+          <h3 class="service-name">Cloud Migrations & Cloud Ops</h3>
+        </div>
+        <div class="service-card">
+            <img src="{% static 'services/custom-software-development.jpg' %}" alt="Custom Software Development" class="service-image">
+          <h3 class="service-name">Custom Software Development</h3>
+        </div>
+        <div class="service-card">
+            <img src="{% static 'services/maintenance-support.webp' %}" alt="Maintenance & Support" class="service-image">
+          <h3 class="service-name">Maintenance & Support</h3>
+        </div>
+      </div>
+
+        <div class="services-toggle">
+            <button class="toggle-btn" id="servicesToggle">
+                <span id="toggleText">View More</span>
+                <span class="toggle-icon" id="toggleIcon">↓</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<!-- CAREERS SECTION -->
+<section class="careers-section">
+    <div class="careers-content">
+        <div class="careers-left">
+            <div class="careers-media">
+                <video class="careers-video" autoplay muted loop>
+                    <source src="{% static 'services/meeting.mp4' %}" type="video/mp4">
+                    <img src="{% static 'services/meeting-fallback.jpg' %}" alt="Team Collaboration" class="careers-gif">
+                </video>
+            </div>
+        </div>
+        <div class="careers-right">
+            <div class="careers-subtitle">CAREERS</div>
+            <h2 class="careers-title">Human-first is our foundation.</h2>
+            <p class="careers-foundation">
+                Join a culture that celebrates excellence and diversity, Globally!
+            </p>
+            <p class="careers-description">
+                At Deployed, we believe our people are our greatest asset. We foster an environment where innovation thrives, 
+                diversity is celebrated, and every team member has the opportunity to grow and make a meaningful impact.
+            </p>
+            <a href="{% url 'main:careers' %}" class="careers-cta">Join Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- READY TO GET STARTED SECTION -->
+<!-- Update the contact form section in home.html -->
+<section class="contact-section">
+    <div class="contact-container">
+        <div class="contact-left">
+            <h2 class="contact-title">Ready to get started?</h2>
+            <p class="contact-description">
+                Connect with us to explore how we can deliver exceptional IT solutions for your needs.
+            </p>
+        </div>
+        
+        <div class="contact-form-container">
+            <!-- Success/Error Messages -->
+            <div id="form-messages" style="display: none;">
+                <div id="success-message" class="alert alert-success" style="display: none;"></div>
+                <div id="error-message" class="alert alert-error" style="display: none;"></div>
+            </div>
+            
+            <form class="contact-form" id="contactForm" method="post" action="{% url 'main:contact_submit' %}">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">First Name <span class="required">*</span></label>
+                        <input type="text" class="form-input" name="first_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Last Name <span class="required">*</span></label>
+                        <input type="text" class="form-input" name="last_name" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Email <span class="required">*</span></label>
+                        <input type="email" class="form-input" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone Number <span class="required">*</span></label>
+                        <div class="phone-group">
+                            <select class="form-select country-select" name="country" required>
+                                <option value="">Select Country</option>
+                                <!-- Countries will be populated by JavaScript -->
+                            </select>
+                            <input type="tel" class="form-input phone-input" name="phone_number" placeholder="Enter your number" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Budget <span class="required">*</span></label>
+                        <input type="text" class="form-input" name="budget" placeholder="Enter your budget range (e.g., $10,000 - $50,000)" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Company Name <span class="required">*</span></label>
+                        <input type="text" class="form-input" name="company_name" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Company Domain/URL</label>
+                        <input type="url" class="form-input" name="company_url" placeholder="https://example.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Region <span class="required">*</span></label>
+                        <select class="form-select" name="region" required>
+                            <option value="">Select Region</option>
+                            <option value="north-america">North America</option>
+                            <option value="south-america">South America</option>
+                            <option value="europe">Europe</option>
+                            <option value="asia-pacific">Asia Pacific</option>
+                            <option value="middle-east">Middle East</option>
+                            <option value="africa">Africa</option>
+                            <option value="oceania">Oceania</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label class="form-label">Services you're looking for <span class="required">*</span></label>
+                    <div class="services-checkboxes">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="remote-it" name="services" value="Remote IT Resources">
+                            <label for="remote-it">Remote IT Resources</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="custom-software" name="services" value="Custom Software Development">
+                            <label for="custom-software">Custom Software Development</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="web-dev" name="services" value="Web Development">
+                            <label for="web-dev">Web Development</label>
+                                                    </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="mobile-dev" name="services" value="Mobile App Development">
+                            <label for="mobile-dev">Mobile App Development</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="ar-vr" name="services" value="AR/VR">
+                            <label for="ar-vr">AR/VR</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="gaming" name="services" value="Gaming">
+                            <label for="gaming">Gaming</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="other-it" name="services" value="Other IT Services">
+                            <label for="other-it">Other IT Services</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label class="form-label">Project Details <span class="required">*</span></label>
+                    <textarea class="form-textarea" name="project_details" placeholder="Tell us about your project requirements, timeline, and any specific needs..." required></textarea>
+                </div>
+                
+                <div class="recaptcha-container">
+                    <div class="g-recaptcha" data-sitekey="{{ settings.RECAPTCHA_PUBLIC_KEY }}"></div>
+                    <small style="color: #6b7280; margin-top: 0.5rem; display: block;">Protected by reCAPTCHA</small>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span id="submitText">Submit</span>
+                    <span id="submitLoader" style="display: none;">Submitting...</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Add reCAPTCHA script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<!-- Add form submission JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const submitText = document.getElementById('submitText');
+    const submitLoader = document.getElementById('submitLoader');
+    const messagesContainer = document.getElementById('form-messages');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+
+    // Populate countries dropdown
+    populateCountries();
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Check if at least one service is selected
+        const services = form.querySelectorAll('input[name="services"]:checked');
+        if (services.length === 0) {
+            showError('Please select at least one service you are interested in.');
+            return;
+        }
+
+        // Check if reCAPTCHA is completed
+        const recaptchaResponse = grecaptcha.getResponse();
+        if (!recaptchaResponse) {
+            showError('Please complete the reCAPTCHA verification.');
+            return;
+        }
+
+        // Show loading state
+        submitBtn.disabled = true;
+        submitText.style.display = 'none';
+        submitLoader.style.display = 'inline';
+
+        // Prepare form data
+        const formData = new FormData(form);
+        
+        // Add reCAPTCHA response
+        formData.append('g-recaptcha-response', recaptchaResponse);
+
+        // Submit form
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                showSuccess(data.message);
+                form.reset();
+                grecaptcha.reset();
+            } else {
+                showError(data.message || 'An error occurred. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            showError('An error occurred. Please try again.');
+        })
+        .finally(() => {
+            // Reset button state
+            submitBtn.disabled = false;
+            submitText.style.display = 'inline';
+            submitLoader.style.display = 'none';
+        });
+    });
+
+    function showSuccess(message) {
+        hideMessages();
+        successMessage.textContent = message;
+        successMessage.style.display = 'block';
+        messagesContainer.style.display = 'block';
+        messagesContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function showError(message) {
+        hideMessages();
+        errorMessage.textContent = message;
+        errorMessage.style.display = 'block';
+        messagesContainer.style.display = 'block';
+        messagesContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function hideMessages() {
+        successMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
+        messagesContainer.style.display = 'none';
+    }
+
+    function populateCountries() {
+        const countrySelect = document.querySelector('.country-select');
+        const countries = [
+            { code: 'US', name: 'United States' },
+            { code: 'CA', name: 'Canada' },
+            { code: 'GB', name: 'United Kingdom' },
+            { code: 'AU', name: 'Australia' },
+            { code: 'DE', name: 'Germany' },
+            { code: 'FR', name: 'France' },
+            { code: 'IN', name: 'India' },
+            { code: 'PK', name: 'Pakistan' },
+            { code: 'BD', name: 'Bangladesh' },
+            { code: 'AE', name: 'United Arab Emirates' },
+            { code: 'SA', name: 'Saudi Arabia' },
+            { code: 'SG', name: 'Singapore' },
+            { code: 'MY', name: 'Malaysia' },
+            { code: 'TH', name: 'Thailand' },
+            { code: 'PH', name: 'Philippines' },
+            { code: 'ID', name: 'Indonesia' },
+            { code: 'JP', name: 'Japan' },
+            { code: 'KR', name: 'South Korea' },
+            { code: 'CN', name: 'China' },
+            { code: 'BR', name: 'Brazil' },
+            { code: 'MX', name: 'Mexico' },
+            { code: 'AR', name: 'Argentina' },
+            { code: 'CL', name: 'Chile' },
+            { code: 'CO', name: 'Colombia' },
+            { code: 'PE', name: 'Peru' },
+            { code: 'ZA', name: 'South Africa' },
+            { code: 'NG', name: 'Nigeria' },
+            { code: 'EG', name: 'Egypt' },
+            { code: 'KE', name: 'Kenya' },
+            { code: 'GH', name: 'Ghana' }
+        ];
+
+        countries.forEach(country => {
+            const option = document.createElement('option');
+            option.value = country.code;
+            option.textContent = country.name;
+            countrySelect.appendChild(option);
+        });
+    }
+});
+</script>
+
+<!-- Add reCAPTCHA script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<!-- Add form submission JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const submitText = document.getElementById('submitText');
+    const submitLoader = document.getElementById('submitLoader');
+    const messagesContainer = document.getElementById('form-messages');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+
+    // Populate countries dropdown
+    populateCountries();
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        console.log('Form submission started'); // Debug log
+        
+        // Check if at least one service is selected
+        const services = form.querySelectorAll('input[name="services"]:checked');
+        console.log('Selected services:', services.length); // Debug log
+        
+        if (services.length === 0) {
+            showError('Please select at least one service you are interested in.');
+            return;
+        }
+
+        // Check if reCAPTCHA is completed
+        let recaptchaResponse = '';
+        try {
+            recaptchaResponse = grecaptcha.getResponse();
+            console.log('reCAPTCHA response:', recaptchaResponse ? 'Present' : 'Missing'); // Debug log
+        } catch (error) {
+            console.error('reCAPTCHA error:', error);
+            showError('reCAPTCHA not loaded. Please refresh the page and try again.');
+            return;
+        }
+        
+        if (!recaptchaResponse) {
+            showError('Please complete the reCAPTCHA verification.');
+            return;
+        }
+
+        // Show loading state
+        submitBtn.disabled = true;
+        submitText.style.display = 'none';
+        submitLoader.style.display = 'inline';
+
+        // Prepare form data
+        const formData = new FormData(form);
+        
+        // Add reCAPTCHA response
+        formData.append('g-recaptcha-response', recaptchaResponse);
+
+        // Debug: Log form data
+        console.log('Form data being sent:');
+        for (let [key, value] of formData.entries()) {
+            console.log(key, value);
+        }
+
+        // Submit form
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+            }
+        })
+        .then(response => {
+            console.log('Response status:', response.status); // Debug log
+            return response.json();
+        })
+        .then(data => {
+            console.log('Response data:', data); // Debug log
+            if (data.success) {
+                showSuccess(data.message);
+                form.reset();
+                try {
+                    grecaptcha.reset();
+                } catch (error) {
+                    console.error('Error resetting reCAPTCHA:', error);
+                }
+            } else {
+                showError(data.message || 'An error occurred. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+            showError('An error occurred. Please try again.');
+        })
+        .finally(() => {
+            // Reset button state
+            submitBtn.disabled = false;
+            submitText.style.display = 'inline';
+            submitLoader.style.display = 'none';
+        });
+    });
+
+    function showSuccess(message) {
+        hideMessages();
+        successMessage.textContent = message;
+        successMessage.style.display = 'block';
+        messagesContainer.style.display = 'block';
+        messagesContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function showError(message) {
+        hideMessages();
+        errorMessage.textContent = message;
+        errorMessage.style.display = 'block';
+        messagesContainer.style.display = 'block';
+        messagesContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function hideMessages() {
+        successMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
+        messagesContainer.style.display = 'none';
+    }
+
+    function populateCountries() {
+        const countrySelect = document.querySelector('.country-select');
+        if (!countrySelect) {
+            console.error('Country select element not found');
+            return;
+        }
+        
+        const countries = [
+            { code: 'US', name: 'United States' },
+            { code: 'CA', name: 'Canada' },
+            { code: 'GB', name: 'United Kingdom' },
+            { code: 'AU', name: 'Australia' },
+            { code: 'DE', name: 'Germany' },
+            { code: 'FR', name: 'France' },
+            { code: 'IN', name: 'India' },
+            { code: 'PK', name: 'Pakistan' },
+            { code: 'BD', name: 'Bangladesh' },
+            { code: 'AE', name: 'United Arab Emirates' },
+            { code: 'SA', name: 'Saudi Arabia' },
+            { code: 'SG', name: 'Singapore' },
+            { code: 'MY', name: 'Malaysia' },
+            { code: 'TH', name: 'Thailand' },
+            { code: 'PH', name: 'Philippines' },
+            { code: 'ID', name: 'Indonesia' },
+            { code: 'JP', name: 'Japan' },
+            { code: 'KR', name: 'South Korea' },
+            { code: 'CN', name: 'China' },
+            { code: 'BR', name: 'Brazil' },
+            { code: 'MX', name: 'Mexico' },
+            { code: 'AR', name: 'Argentina' },
+            { code: 'CL', name: 'Chile' },
+            { code: 'CO', name: 'Colombia' },
+            { code: 'PE', name: 'Peru' },
+            { code: 'ZA', name: 'South Africa' },
+            { code: 'NG', name: 'Nigeria' },
+            { code: 'EG', name: 'Egypt' },
+            { code: 'KE', name: 'Kenya' },
+            { code: 'GH', name: 'Ghana' }
+        ];
+
+        countries.forEach(country => {
+            const option = document.createElement('option');
+            option.value = country.code;
+            option.textContent = country.name;
+            countrySelect.appendChild(option);
+        });
+        
+        console.log('Countries populated:', countries.length); // Debug log
+    }
+});
+</script>
+
+{% endblock %}

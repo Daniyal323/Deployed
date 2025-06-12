@@ -1,0 +1,1622 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Web Development Services | Deployed - Building Seamless Experiences{% endblock %}
+
+{% block content %}
+<style>
+/* Add font family to all elements */
+* {
+    font-family: Arial, sans-serif;
+}
+
+/* Hero Section Styles */
+.service-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('{% static "services/web-development.png" %}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.service-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+}
+
+.hero-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    max-width: 1800px;
+    margin: 0 auto;
+    text-align: left;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.service-category {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: -1rem;
+    font-family: Arial, sans-serif;
+}
+
+.service-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-family: Arial, sans-serif;
+}
+
+.service-cta {
+    display: inline-block;
+    background: #4f46e5;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.service-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+    background: white;
+    color: black;
+}
+
+/* Overview Section - Fixed Alignment */
+.overview-section {
+    background: var(--bg-primary);
+    padding: 6rem 0;
+}
+
+.overview-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.overview-content {
+    /* Removed negative margin for proper alignment */
+    margin-left: 0;
+}
+
+.overview-subtitle {
+    color: #667eea;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.overview-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.overview-highlight {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.overview-features {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.overview-features li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding-left: 0;
+    font-family: Arial, sans-serif;
+}
+
+.overview-features li::before {
+    display: none;
+}
+
+.overview-features li strong {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+}
+
+.overview-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.overview-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Website Now */
+.website-now-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.website-now {
+    display: inline-block;
+    background: #4f46e5;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    font-family: Arial, sans-serif;
+}
+
+.website-now:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+    background: white;
+    color: black;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 5rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-family: Arial, sans-serif;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.feature-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.feature-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+/* Technologies Section */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tech-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.tech-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.tech-logo {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.tech-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-family: Arial, sans-serif;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.cta-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    font-family: Arial, sans-serif;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    font-family: Arial, sans-serif;
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: #667eea;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .overview-container {
+        max-width: 1200px;
+        gap: 3rem;
+    }
+    
+    .overview-description {
+        font-size: 1.1rem;
+    }
+    
+    .overview-highlight {
+        font-size: 1.2rem;
+    }
+    
+    .overview-features li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-hero {
+        height: 90vh;
+        min-height: 400px;
+    }
+    
+    .hero-glass {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .service-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .cta-title {
+        font-size: 2.2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+    
+    .overview-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+    
+    .overview-description {
+        font-size: 1rem;
+    }
+    
+    .overview-highlight {
+        font-size: 1.1rem;
+    }
+    
+    .overview-features li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-glass {
+        padding: 1.5rem 1rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .overview-container {
+        padding: 0 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .cta-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Enterprise Section */
+.enterprise-section {
+    background: var(--bg-secondary);
+    padding: 6rem 0;
+}
+
+.enterprise-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.enterprise-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.enterprise-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+}
+
+.enterprise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.enterprise-card {
+    position: relative;
+    background: var(--card-bg);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    height: 575px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.enterprise-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.4s ease, transform 0.4s ease;
+    transform: translateY(0);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease 0.2s, visibility 0.4s ease 0.2s;
+}
+
+.enterprise-card:hover .card-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.enterprise-card:hover .card-image img {
+    filter: blur(3px);
+    transform: translateY(20px) scale(1.05);
+}
+
+.overlay-text {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    margin-top: -6em;
+    margin-left: 1.2em;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+
+.overlay-text {
+    color: white;
+    font-size: 1rem;
+    /* line-height: 1.6; */
+    text-align: left;
+    font-family: Arial, sans-serif;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: transform 0.5s ease 0.3s, opacity 0.5s ease 0.3s;
+}
+
+.enterprise-card:hover .overlay-text {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    align-self: flex-start;
+    /* background: rgba(0, 0, 0, 0.3); */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+}
+
+.enterprise-card:hover .card-title {
+    opacity: 0.3;
+}
+
+.card-button {
+    display: inline-block;
+    background: #4f46e5;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+    align-self: flex-end;
+    pointer-events: all;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+    backdrop-filter: blur(5px);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.enterprise-card:hover .card-button {
+    opacity: 0.9;
+    transform: translateY(-5px);
+}
+
+.card-button:hover {
+    background: white;
+    color: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
+}
+
+/* Responsive Design for Enterprise Section */
+@media (max-width: 1200px) {
+    .enterprise-title {
+        font-size: 2.8rem;
+    }
+    
+    .enterprise-grid {
+        gap: 1.5rem;
+    }
+    
+    .enterprise-card {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .enterprise-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .enterprise-title {
+        font-size: 2.2rem;
+    }
+    
+    .enterprise-card {
+        height: 300px;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+    
+    .overlay-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .enterprise-container {
+        padding: 0 1rem;
+    }
+    
+    .enterprise-title {
+        font-size: 1.8rem;
+    }
+    
+    .card-content {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+    }
+    
+    .overlay-text {
+        font-size: 0.85rem;
+    }
+}
+
+.full-image{
+    background: white;
+}
+.full-image img{
+    margin-left: 15%;
+}
+
+/* Industries Section - Updated */
+.industries-section {
+    background: var(--bg-primary);
+    padding: 6rem 0;
+}
+
+.industries-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.industries-header {
+    margin-bottom: 4rem;
+}
+
+.industries-subtitle {
+    color: #667eea;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.industries-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+    font-family: Arial, sans-serif;
+}
+
+.industries-content {
+    display: block;
+}
+
+.industries-row {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.industry-card {
+    flex: 1;
+    border: 2px solid #667eea;
+    background: var(--card-bg);
+    display: flex;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 200px; /* Set consistent height */
+}
+
+/* Remove borders between cards */
+.industry-card:not(:last-child) {
+    border-right: none;
+}
+
+.industries-row:not(:last-child) .industry-card {
+    border-bottom: none;
+}
+
+.industry-card:hover {
+    background: rgba(102, 126, 234, 0.05);
+    z-index: 2;
+}
+
+.industry-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.industry-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.industry-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.industry-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.industry-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    flex: 1;
+}
+
+/* Responsive Design for Industries Section */
+@media (max-width: 1200px) {
+    .industries-title {
+        font-size: 2.4rem;
+    }
+    
+    .industry-card {
+        padding: 1.5rem;
+        gap: 1rem;
+        min-height: 180px;
+    }
+    
+    .industry-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .industries-row {
+        flex-direction: column;
+    }
+    
+    .industry-card {
+        border-right: 2px solid #667eea;
+        border-bottom: none;
+        min-height: auto;
+    }
+    
+    .industry-card:not(:last-child) {
+        border-bottom: none;
+    }
+    
+    .industries-row:not(:last-child) .industry-card:last-child {
+        border-bottom: 2px solid #667eea;
+    }
+    
+    .industries-title {
+        font-size: 2rem;
+    }
+    
+    .industry-card {
+        padding: 1.5rem;
+    }
+    
+    .industry-name {
+        font-size: 1.2rem;
+    }
+    
+    .industry-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .industries-container {
+        padding: 0 1rem;
+    }
+    
+    .industries-title {
+        font-size: 1.8rem;
+    }
+    
+    .industry-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .industry-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .industry-description {
+        font-size: 0.85rem;
+    }
+}
+
+/* Our Tech Stack Section */
+.tech-stack-section {
+    background: var(--bg-secondary);
+    padding: 6rem 0;
+}
+
+.tech-stack-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.tech-stack-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.tech-stack-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+}
+
+.tech-stack-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+.tech-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    justify-items: center;
+}
+
+.tech-stack-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.tech-stack-item:hover {
+    transform: translateY(-10px);
+}
+
+.tech-stack-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    /* border: 3px solid #667eea; */
+    /* box-shadow: 0 10px 30px rgba(102, 126, 234, 0.1); */
+    transition: all 0.3s ease;
+}
+
+.tech-stack-icon:hover {
+    border-color: #764ba2;
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+    transform: scale(1.05);
+}
+
+.tech-stack-icon img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.tech-stack-item:hover .tech-stack-icon img {
+    transform: scale(1.1);
+}
+
+/* Responsive Design for Tech Stack Section */
+@media (max-width: 1400px) {
+    .tech-stack-icon {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .tech-stack-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .tech-stack-title {
+        font-size: 2.4rem;
+    }
+    
+    .tech-stack-grid {
+        gap: 1rem;
+    }
+    
+    .tech-stack-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 992px) {
+    .tech-stack-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    
+    .tech-stack-icon {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-stack-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .tech-stack-title {
+        font-size: 2rem;
+    }
+    
+    .tech-stack-description {
+        font-size: 1.1rem;
+    }
+    
+    .tech-stack-icon {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-stack-container {
+        padding: 0 1rem;
+    }
+    
+    .tech-stack-title {
+        font-size: 1.8rem;
+    }
+    
+    .tech-stack-description {
+        font-size: 1rem;
+    }
+    
+    .tech-stack-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .tech-stack-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+</style>
+
+<!-- Hero Section -->
+<section class="service-hero">
+    <div class="hero-content">
+        <div class="hero-glass">
+            <div class="service-category">WEB DEVELOPMENT</div>
+            <h1 class="service-title">Building Seamless Experiences</h1>
+            <a href="{% url 'main:contact' %}" class="service-cta">Build High-Performance Website</a>
+        </div>
+    </div>
+</section>
+
+<!-- Overview Section - Simplified -->
+<section class="overview-section">
+    <div class="overview-container">
+        <div class="overview-content">
+            <div class="overview-subtitle">OVERVIEW</div>
+            <p class="overview-description">
+                Our web development services provide enterprise-grade and customized web development solutions 
+                tailored to meet the evolving demands of modern businesses.<br> Whether you need a simple landing 
+                page or a complex web application, we have the expertise to deliver results that exceed expectations.
+            </p>
+            
+            <div class="overview-highlight">What we are good at:</div>
+            
+            <ul class="overview-features">
+                <li>
+                    <strong>Cutting-Edge Technologies:</strong> Our use of the latest frameworks and technologies 
+                    such as React.js, Angular, Vue.js, Node.js, Laravel, Ruby on Rails, and Python ensures your 
+                    web solutions are future-ready.
+                </li>
+                <li>
+                    <strong>Responsive Design:</strong> Our approach guarantees your website adapts to all screen 
+                    sizes, providing a seamless user experience across all devices.
+                </li>
+                <li>
+                    <strong>Performance Optimization:</strong> We ensure your website is optimized for speed and 
+                    performance, leveraging CDNs, lazy loading, and caching strategies to enhance load times.
+                </li>
+                <li>
+                    <strong>Web Security:</strong> We ensure that your website is protected with the latest security 
+                    standards, including SSL encryption, firewalls, and regular security audits.
+                </li>
+            </ul>
+        </div>
+        
+        <div class="overview-image">
+            <img src="{% static 'services/web-development_2.jpeg' %}" alt="Web Development Overview" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<section class="website-now-section">
+    <a href="{% url 'main:contact' %}" class="website-now">Build Your Website Now</a>
+</section>
+
+<!-- Seamless & Enterprise-ready Web Development Section -->
+<section class="enterprise-section">
+    <div class="enterprise-container">
+        <div class="enterprise-header">
+            <h2 class="enterprise-title">Seamless & Enterprise-ready Web<br>s Development</h2>
+        </div>
+        
+        <div class="enterprise-grid">
+            <!-- Custom Web Development -->
+            <div class="enterprise-card">
+                <div class="card-image">
+                    <img src="{% static 'services/custom-software-development.jpg' %}" alt="Custom Web Development">
+                    <div class="card-overlay">
+                        <p class="overlay-text">We specialize in building custom websites tailored to your unique business requirements. Our team works closely with you to understand your vision and create a fully customized web solution that meets both your functional and aesthetic goals. Whether it's a brand-new website or a platform upgrade, we ensure that the final product is scalable, user-friendly, and designed to evolve with your business.</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Custom Web Development</h3>
+                    <a href="{% url 'main:contact' %}" class="card-button">Get in Touch</a>
+                </div>
+            </div>
+
+            <!-- E-Commerce Development -->
+            <div class="enterprise-card">
+                <div class="card-image">
+                    <img src="{% static 'services/e-commerce_development.jpg' %}" alt="E-Commerce Development">
+                    <div class="card-overlay">
+                        <p class="overlay-text">We develop powerful and secure e-commerce websites that enable businesses to sell products and services seamlessly online. Our expertise spans across various e-commerce platforms, including Shopify, Magento, WooCommerce, and BigCommerce. From responsive designs and intuitive shopping cart systems to secure payment gateways and inventory management, we deliver solutions that enhance the shopping experience, increase conversions, and drive business growth.</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">E-Commerce Development</h3>
+                    <a href="{% url 'main:contact' %}" class="card-button">Get in Touch</a>
+                </div>
+            </div>
+
+            <!-- Content Management System (CMS) -->
+            <div class="enterprise-card">
+                <div class="card-image">
+                    <img src="{% static 'services/CMS.jpg' %}" alt="Content Management System">
+                    <div class="card-overlay">
+                        <p class="overlay-text">We build flexible, easy-to-use CMS platforms like WordPress, Drupal, and Joomla that allow businesses to manage their website content effortlessly. Our CMS solutions are designed with scalability in mind, enabling you to grow your website and add new features over time. Whether you need a blog, a portfolio, or an enterprise-level site, we provide the tools you need to create, manage, and publish content effectively.</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Content Management System (CMS)</h3>
+                    <a href="{% url 'main:contact' %}" class="card-button">Get in Touch</a>
+                </div>
+            </div>
+
+            <!-- Web Application Development -->
+            <div class="enterprise-card">
+                <div class="card-image">
+                    <img src="{% static 'services/web-development_2.jpeg' %}" alt="Web Application Development">
+                    <div class="card-overlay">
+                        <p class="overlay-text">Our team develops complex, scalable web applications tailored to your business needs. Using frameworks such as React, Angular, and Vue.js, we build responsive, high-performance applications that are secure and user-friendly. Whether you need a custom CRM system, project management tool, or client portal, we provide end-to-end solutions that improve business processes and increase operational efficiency.</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Web Application Development</h3>
+                    <a href="{% url 'main:contact' %}" class="card-button">Get in Touch</a>
+                </div>
+            </div>
+
+            <!-- UI/UX Design -->
+            <div class="enterprise-card">
+                <div class="card-image">
+                    <img src="{% static 'services/UI:UX_web.jpeg' %}" alt="UI/UX Design">
+                    <div class="card-overlay">
+                        <p class="overlay-text">Designing for an exceptional user experience is at the core of our development process. Our UI/UX designers work to create visually stunning, intuitive, and user-friendly interfaces that ensure your website or application engages visitors and enhances their experience. By focusing on accessibility, navigation, and responsive design, we create digital experiences that leave a lasting impression.</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">UI/UX Design</h3>
+                    <a href="{% url 'main:contact' %}" class="card-button">Get in Touch</a>
+                </div>
+            </div>
+
+            <!-- API Integration & Development -->
+            <div class="enterprise-card">
+                <div class="card-image">
+                    <img src="{% static 'services/api_integeration.jpeg' %}" alt="API Integration & Development">
+                    <div class="card-overlay">
+                        <p class="overlay-text">We specialize in integrating third-party services and APIs into your web platform to enhance functionality and improve efficiency. Whether it's payment gateways, social media platforms, CRM systems, or other enterprise software, we ensure that the integration process is seamless and that all systems communicate effectively. Our team also develops custom APIs to connect your website with other platforms or services, enhancing flexibility and scalability.</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">API Integration & Development</h3>
+                    <a href="{% url 'main:contact' %}" class="card-button">Get in Touch</a>
+                </div>
+            </div>
+
+            <!-- Website Maintenance & Support -->
+            <div class="enterprise-card">
+                <div class="card-image">
+                    <img src="{% static 'services/website_maintainence.jpg' %}" alt="Custom Web Development">
+                    <div class="card-overlay">
+                        <p class="overlay-text">Once your website is live, we provide ongoing maintenance and support services to ensure it runs smoothly, remains secure, and stays up-to-date with the latest technology trends. Our team performs regular updates, security audits, bug fixes, and optimizations, ensuring your website continues to perform at its best. We offer flexible support packages tailored to your needs, ensuring your site is always ready for growth.</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Website Maintenance & Support</h3>
+                    <a href="{% url 'main:contact' %}" class="card-button">Get in Touch</a>
+                </div>
+            </div>
+
+            <!-- SEO & Digital Marketing Integration -->
+            <div class="enterprise-card">
+                <div class="card-image">
+                    <img src="{% static 'services/SEO_Digital_marketing.jpg' %}" alt="Custom Web Development">
+                    <div class="card-overlay">
+                        <p class="overlay-text">To help your website reach its full potential, we integrate SEO and digital marketing best practices throughout the development process. From on-page optimization, such as keyword research, content structuring, and metadata management, to off-page SEO strategies, we ensure your website ranks higher on search engines. We also integrate analytics tools and optimize content for maximum reach, helping you drive organic traffic and improve conversions.</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">SEO & Digital Marketing Integration</h3>
+                    <a href="{% url 'main:contact' %}" class="card-button">Get in Touch</a>
+                </div>
+            </div>
+
+            <!-- Web Secuity Soultions -->
+            <div class="enterprise-card">
+                <div class="card-image">
+                    <img src="{% static 'services/web_security.jpg' %}" alt="Custom Web Development">
+                    <div class="card-overlay">
+                        <p class="overlay-text">We understand that website security is critical to protecting your business and users. We implement industry-standard security measures such as SSL certificates, firewalls, data encryption, and two-factor authentication to ensure that your website remains secure from threats. Regular security audits and updates are also part of our services, keeping your website protected from emerging vulnerabilities.</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Web Security Solutions</h3>
+                    <a href="{% url 'main:contact' %}" class="card-button">Get in Touch</a>
+                </div>
+            </div>
+
+            <!-- Performance Optimization -->
+            <div class="enterprise-card">
+                <div class="card-image">
+                    <img src="{% static 'services/Perfromance_optimization.jpg' %}" alt="Custom Web Development">
+                    <div class="card-overlay">
+                        <p class="overlay-text">Website performance is a critical factor in user experience and SEO rankings. We optimize your site for faster load times by implementing strategies like image compression, minification of CSS and JavaScript files, caching mechanisms, and Content Delivery Networks (CDNs). This ensures that your website provides an exceptional user experience while maintaining excellent performance across devices.</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Performance Optimization</h3>
+                    <a href="{% url 'main:contact' %}" class="card-button">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="full-image">
+        <img class="full-image is-diagram" src="{% static 'services/why_choose_deployed.png' %}" alt="Custom Web Development">
+    </div>
+</section>
+
+<section>
+    <div class="full-image">
+        <img class="full-image is-diagram" src="{% static 'services/our_web_process.png' %}" alt="Custom Web Development">
+    </div>
+</section>
+
+<section class="website-now-section">
+    <a href="{% url 'main:contact' %}" class="website-now" style="margin-top: 50px;">Create Scalable Web Solutions</a>
+</section>
+
+<!-- Industries We Focus Section -->
+<section class="industries-section">
+    <div class="industries-container">
+        <div class="industries-header">
+            <div class="industries-subtitle">INDUSTRIES WE FOCUS</div>
+            <h2 class="industries-title">Industries We Serve with Our Custom Web Development Services</h2>
+        </div>
+        
+        <div class="industries-content">
+            <!-- First Row -->
+            <div class="industries-row">
+                <div class="industry-card">
+                    <!-- <div class="industry-icon">
+                        <img src="{% static 'services/finance-icon.png' %}" alt="Finance & Fintech">
+                    </div> -->
+                    <div class="industry-content">
+                        <h3 class="industry-name">Finance & Fintech</h3>
+                        <p class="industry-description">
+                            In finance, precision and performance are paramount. We build secure web portals and mobile banking apps that allow seamless, 24/7 access to services. Our solutions integrate payment gateways, transaction tracking, and real-time notifications, ensuring your digital banking services are reliable, secure, and scalable. We are committed to providing fintech solutions that foster trust, transparency, and financial growth.</p>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <!-- <div class="industry-icon">
+                        <img src="{% static 'services/healthcare-icon.png' %}" alt="Healthcare">
+                    </div> -->
+                    <div class="industry-content">
+                        <h3 class="industry-name">Healthcare</h3>
+                        <p class="industry-description">
+                            Digital solutions in healthcare must adhere to strict regulations like HIPAA and GDPR. We develop secure patient portals, telemedicine apps, and healthcare management systems that streamline operations while safeguarding patient data. Our expertise ensures that your healthcare applications not only meet regulatory standards but also enhance the overall user experience for patients and providers alike.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <!-- <div class="industry-icon">
+                        <img src="{% static 'services/logistics-icon.png' %}" alt="Logistics & Supply Chain">
+                    </div> -->
+                    <div class="industry-content">
+                        <h3 class="industry-name">Logistics & Supply Chain</h3>
+                        <p class="industry-description">
+                            From real-time tracking systems to warehouse management apps and route optimization software, we create custom digital platforms that provide end-to-end visibility into your supply chain operations. Our solutions improve operational efficiency, accuracy, and decision-making, enabling you to optimize logistics and streamline supply chain processes for maximum performance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second Row -->
+            <div class="industries-row">
+                <div class="industry-card">
+                    <!-- <div class="industry-icon">
+                        <img src="{% static 'services/education-icon.png' %}" alt="Education & E-learning">
+                    </div> -->
+                    <div class="industry-content">
+                        <h3 class="industry-name">Education & E-learning</h3>
+                        <p class="industry-description">
+                            We build scalable Learning Management Systems (LMS) and e-learning platforms that offer interactive, customizable content and data-driven insights. Our platforms are ideal for schools, universities, and corporate training programs, providing personalized learning experiences and real-time progress tracking. Whether you're delivering courses or conducting assessments, we ensure a seamless, engaging, and effective online learning environment.</p>
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <!-- <div class="industry-icon">
+                        <img src="{% static 'services/education-icon.png' %}" alt="Education & E-learning">
+                    </div> -->
+                    <div class="industry-content">
+                        <h3 class="industry-name">Retail</h3>
+                        <p class="industry-description">
+                            In the competitive retail landscape, a fast, smooth, and responsive platform is essential for customer retention and increasing sales. We specialize in building custom e-commerce websites, mobile apps, and PWAs (Progressive Web Apps) that integrate seamlessly with payment systems, real-time inventory management, and advanced analytics. Our solutions are designed to scale as your business grows, helping you deliver exceptional customer experiences and boost conversions.</p>
+                    </div>
+                </div>
+                
+                <!-- Placeholder for future industries -->
+                <!-- <div class="industry-card" style="opacity: 0.3; pointer-events: none;">
+                    <div class="industry-icon">
+                        <img src="{% static 'services/coming-soon-icon.png' %}" alt="Coming Soon">
+                    </div>
+                    <div class="industry-content">
+                        <h3 class="industry-name">Coming Soon</h3>
+                        <p class="industry-description">More industries coming soon...</p>
+                    </div>
+                </div> -->
+                
+                <div class="industry-card" style="opacity: 0.3; pointer-events: none;">
+                    <!-- <div class="industry-icon">
+                        <img src="{% static 'services/coming-soon-icon.png' %}" alt="Coming Soon">
+                    </div> -->
+                    <div class="industry-content">
+                        <!-- <h3 class="industry-name">Coming Soon</h3> -->
+                        <!-- <p class="industry-description">More industries coming soon...</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="website-now-section">
+    <a href="{% url 'main:contact' %}" class="website-now" style="margin-top: 50px;">Transform Your Digital Presence</a>
+</section>
+
+<!-- Our Tech Stack Section -->
+<section class="tech-stack-section">
+    <div class="tech-stack-container">
+        <div class="tech-stack-header">
+            <h2 class="tech-stack-title">Our Tech Stack</h2>
+            <p class="tech-stack-description">Equipped with the latest tools, our teams deliver impactful solutions designed to grow your business.</p>
+        </div>
+        
+        <div class="tech-stack-grid">
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/aws.png' %}" alt="Technology 1">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/docker.png' %}" alt="Technology 2">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/kubernetes.png' %}" alt="Technology 3">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/mysql.png' %}" alt="Technology 4">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/postgresql.png' %}" alt="Technology 5">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/mongodb.png' %}" alt="Technology 6">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/selenium.png' %}" alt="Technology 7">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/apache.png' %}" alt="Technology 8">
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-stack-grid">
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/firebase.png' %}" alt="Technology 1">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/js.png' %}" alt="Technology 2">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/typescript.png' %}" alt="Technology 3">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/react.png' %}" alt="Technology 4">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/nextjs.png' %}" alt="Technology 5">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/vuejs.png' %}" alt="Technology 6">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/angular.png' %}" alt="Technology 7">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/svelte.png' %}" alt="Technology 8">
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-stack-grid">
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/tailwindcss.webp' %}" alt="Technology 1">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/boostrap.png' %}" alt="Technology 2">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/laravel.png' %}" alt="Technology 3">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/cassandra.png' %}" alt="Technology 4">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/redis.png' %}" alt="Technology 5">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/neo4j.png' %}" alt="Technology 6">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/gitlab.png' %}" alt="Technology 7">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/terraform.png' %}" alt="Technology 8">
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-stack-grid">
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/ansible.png' %}" alt="Technology 1">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/digitaloccean.png' %}" alt="Technology 2">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/joker.png' %}" alt="Technology 3">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/mocha.png' %}" alt="Technology 4">
+                </div>
+            </div>
+            
+            <div class="tech-stack-item">
+                <div class="tech-stack-icon">
+                    <img src="{% static 'services/cypress.png' %}" alt="Technology 5">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2 class="cta-title">Ready to Build Your Dream Website?</h2>
+        <p class="cta-description">
+            Let's discuss your project and create a web solution that drives your business forward. 
+            Get started with a free consultation today.
+        </p>
+        <a href="{% url 'main:contact' %}" class="cta-button">Start Your Project</a>
+    </div>
+</section>
+
+{% endblock %}
+

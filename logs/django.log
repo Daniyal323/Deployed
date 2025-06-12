@@ -1,0 +1,1321 @@
+INFO 2025-06-11 21:41:51,113 autoreload 2717 8484986624 Watching for file changes with StatReloader
+INFO 2025-06-11 21:44:58,085 autoreload 3144 8484986624 Watching for file changes with StatReloader
+ERROR 2025-06-11 21:45:01,051 log 3144 6156562432 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Documents/Deployed/main/views.py", line 27, in home
+    return render(request, 'main/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 694: 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-06-11 21:45:01,069 basehttp 3144 6156562432 "GET / HTTP/1.1" 500 183507
+ERROR 2025-06-11 21:45:51,542 log 3144 6156562432 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Documents/Deployed/main/views.py", line 27, in home
+    return render(request, 'main/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 694: 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-06-11 21:45:51,545 basehttp 3144 6156562432 "GET / HTTP/1.1" 500 184336
+ERROR 2025-06-11 21:46:06,519 log 3144 6156562432 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Documents/Deployed/main/views.py", line 27, in home
+    return render(request, 'main/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 694: 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-06-11 21:46:06,521 basehttp 3144 6156562432 "GET / HTTP/1.1" 500 184338
+ERROR 2025-06-11 21:46:11,282 log 3144 6156562432 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Documents/Deployed/main/views.py", line 27, in home
+    return render(request, 'main/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 695: 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-06-11 21:46:11,286 basehttp 3144 6156562432 "GET / HTTP/1.1" 500 183484
+ERROR 2025-06-11 21:46:44,479 log 3144 6156562432 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Documents/Deployed/main/views.py", line 27, in home
+    return render(request, 'main/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 656: 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-06-11 21:46:44,481 basehttp 3144 6156562432 "GET / HTTP/1.1" 500 183664
+INFO 2025-06-11 21:47:57,788 autoreload 3382 8484986624 Watching for file changes with StatReloader
+ERROR 2025-06-11 21:49:53,613 log 3382 6134853632 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Documents/Deployed/main/views.py", line 27, in home
+    return render(request, 'main/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 694: 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-06-11 21:49:53,623 basehttp 3382 6134853632 "GET / HTTP/1.1" 500 183421
+INFO 2025-06-11 21:52:35,190 basehttp 3382 6134853632 "GET / HTTP/1.1" 200 43034
+WARNING 2025-06-11 21:52:35,357 basehttp 3382 6134853632 "GET /static/services/meeting-fallback.jpg HTTP/1.1" 404 2014
+WARNING 2025-06-11 21:52:36,537 log 3382 6134853632 Not Found: /sw.js
+WARNING 2025-06-11 21:52:36,539 basehttp 3382 6134853632 "GET /sw.js HTTP/1.1" 404 4341
+ERROR 2025-06-11 21:53:13,559 log 3382 6134853632 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Documents/Deployed/main/views.py", line 27, in home
+    return render(request, 'main/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 590, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 6: 'block'. Looking for one of: endblock.
+ERROR 2025-06-11 21:53:13,563 basehttp 3382 6134853632 "GET / HTTP/1.1" 500 178441
+INFO 2025-06-11 21:58:26,471 basehttp 3382 6134853632 "GET / HTTP/1.1" 200 49417
+WARNING 2025-06-11 21:58:26,598 basehttp 3382 6134853632 "GET /static/services/meeting-fallback.jpg HTTP/1.1" 404 2014
+WARNING 2025-06-11 21:58:27,854 log 3382 6151680000 Not Found: /sw.js
+WARNING 2025-06-11 21:58:27,857 basehttp 3382 6151680000 "GET /sw.js HTTP/1.1" 404 4341
+INFO 2025-06-11 22:00:30,339 basehttp 3382 6151680000 "POST /contact-submit/ HTTP/1.1" 200 81
+INFO 2025-06-11 22:00:31,945 basehttp 3382 6134853632 "POST /contact-submit/ HTTP/1.1" 200 89
+INFO 2025-06-11 22:00:37,694 basehttp 3382 6134853632 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-11 22:00:37,733 basehttp 3382 6134853632 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2025-06-11 22:02:42,352 basehttp 3382 6134853632 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-06-11 22:02:42,366 basehttp 3382 6134853632 "GET /admin/ HTTP/1.1" 200 8416
+INFO 2025-06-11 22:02:42,472 basehttp 3382 6134853632 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-06-11 22:02:42,522 basehttp 3382 6134853632 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-06-11 22:02:42,524 basehttp 3382 6151680000 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-06-11 22:03:13,674 basehttp 3382 6134853632 "GET /admin/main/contactinquiry/ HTTP/1.1" 200 36783
+INFO 2025-06-11 22:03:13,757 basehttp 3382 6151680000 "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+INFO 2025-06-11 22:03:13,758 basehttp 3382 6134853632 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2025-06-11 22:03:13,825 basehttp 3382 6151680000 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+INFO 2025-06-11 22:03:13,831 basehttp 3382 6134853632 "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2025-06-11 22:03:13,841 basehttp 3382 6169079808 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-11 22:03:13,845 basehttp 3382 6219558912 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-06-11 22:03:13,845 basehttp 3382 6202732544 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-06-11 22:03:13,847 basehttp 3382 6151680000 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11991
+INFO 2025-06-11 22:03:13,848 basehttp 3382 6134853632 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-06-11 22:03:13,852 basehttp 3382 6219558912 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-06-11 22:03:13,855 basehttp 3382 6169079808 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-06-11 22:03:13,857 basehttp 3382 6185906176 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-06-11 22:03:13,888 basehttp 3382 6185906176 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-06-11 22:03:13,896 basehttp 3382 6202732544 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-06-11 22:03:13,924 basehttp 3382 6202732544 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-06-11 22:03:13,931 basehttp 3382 6185906176 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2025-06-11 22:03:13,936 basehttp 3382 6169079808 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-06-11 22:03:22,824 basehttp 3382 6134853632 "GET /admin/main/contactinquiry/3/change/ HTTP/1.1" 200 37837
+INFO 2025-06-11 22:03:22,928 basehttp 3382 6151680000 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-06-11 22:03:22,936 basehttp 3382 6202732544 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-06-11 22:03:22,937 basehttp 3382 6185906176 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2025-06-11 22:03:22,939 basehttp 3382 6169079808 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-06-11 22:03:22,940 basehttp 3382 6134853632 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-11 22:03:22,943 basehttp 3382 6134853632 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-06-11 23:09:11,704 basehttp 3382 6134853632 "GET /admin/main/contactinquiry/ HTTP/1.1" 200 36783
+INFO 2025-06-11 23:09:11,828 basehttp 3382 6134853632 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-11 23:09:52,845 basehttp 3382 6134853632 "GET / HTTP/1.1" 200 49417
+WARNING 2025-06-11 23:09:53,013 basehttp 3382 6134853632 "GET /static/services/meeting-fallback.jpg HTTP/1.1" 404 2014
+WARNING 2025-06-11 23:09:54,519 log 3382 6134853632 Not Found: /sw.js
+WARNING 2025-06-11 23:09:54,520 basehttp 3382 6134853632 "GET /sw.js HTTP/1.1" 404 4341
+INFO 2025-06-11 23:10:15,664 basehttp 3382 6134853632 "GET /services/ HTTP/1.1" 200 22787
+WARNING 2025-06-11 23:10:18,252 log 3382 6134853632 Not Found: /sw.js
+WARNING 2025-06-11 23:10:18,252 basehttp 3382 6134853632 "GET /sw.js HTTP/1.1" 404 4341
+INFO 2025-06-12 11:24:50,795 autoreload 3382 8484986624 /Users/daniyal/Documents/Deployed/main/urls.py changed, reloading.
+INFO 2025-06-12 11:24:51,823 autoreload 6550 8484986624 Watching for file changes with StatReloader
+INFO 2025-06-12 11:26:28,247 autoreload 6550 8484986624 /Users/daniyal/Documents/Deployed/main/views.py changed, reloading.
+INFO 2025-06-12 11:26:28,603 autoreload 6569 8484986624 Watching for file changes with StatReloader
+INFO 2025-06-12 11:30:34,535 basehttp 6569 6192082944 "GET / HTTP/1.1" 200 49437
+INFO 2025-06-12 11:30:34,739 basehttp 6569 6242562048 "GET /static/services/mobile-app-development.webp HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,739 basehttp 6569 6208909312 "GET /static/images/deployed-logo-blur.png HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,739 basehttp 6569 6276214784 "GET /static/services/AI.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,740 basehttp 6569 6259388416 "GET /static/services/cloud-services.webp HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,739 basehttp 6569 6225735680 "GET /static/services/web-development.png HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,748 basehttp 6569 6208909312 "GET /static/services/data-analytics.webp HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,748 basehttp 6569 6225735680 "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,748 basehttp 6569 6276214784 "GET /static/services/dynamics365.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,748 basehttp 6569 6259388416 "GET /static/js/countries.js HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,823 basehttp 6569 6225735680 "GET /static/services/web3.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,838 basehttp 6569 6242562048 "GET /static/services/QA.avif HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,838 basehttp 6569 6225735680 "GET /static/services/gaming-art.webp HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,843 basehttp 6569 6276214784 "GET /static/services/game-dev.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,845 basehttp 6569 6259388416 "GET /static/services/staff-augmentation.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,847 basehttp 6569 6225735680 "GET /static/services/devops.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,848 basehttp 6569 6242562048 "GET /static/services/e-commerce.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,849 basehttp 6569 6208909312 "GET /static/services/AR%3AVR%3AXR.png HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,849 basehttp 6569 6259388416 "GET /static/services/Saas.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,850 basehttp 6569 6276214784 "GET /static/services/UI%3AUX.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,851 basehttp 6569 6242562048 "GET /static/services/metaverse.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,852 basehttp 6569 6208909312 "GET /static/services/cloud-migrations.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,852 basehttp 6569 6259388416 "GET /static/services/custom-software-development.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,854 basehttp 6569 6276214784 "GET /static/services/maintenance-support.webp HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,856 basehttp 6569 6208909312 "GET /static/services/meeting.mp4 HTTP/1.1" 304 0
+INFO 2025-06-12 11:30:34,866 basehttp 6569 6192082944 "GET /static/css/main.css HTTP/1.1" 200 42175
+WARNING 2025-06-12 11:30:34,866 basehttp 6569 6242562048 "GET /static/services/meeting-fallback.jpg HTTP/1.1" 404 2014
+WARNING 2025-06-12 11:30:36,300 log 6569 6192082944 Not Found: /sw.js
+WARNING 2025-06-12 11:30:36,302 basehttp 6569 6192082944 "GET /sw.js HTTP/1.1" 404 4627
+INFO 2025-06-12 11:30:36,367 basehttp 6569 6192082944 - Broken pipe from ('127.0.0.1', 59816)
+ERROR 2025-06-12 11:30:38,600 log 6569 6192082944 Internal Server Error: /services/website-development/
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Documents/Deployed/main/views.py", line 48, in web_development
+    return render(request, 'main/services/web_development.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: main/services/web_development.html
+ERROR 2025-06-12 11:30:38,602 basehttp 6569 6192082944 "GET /services/website-development/ HTTP/1.1" 500 83055
+WARNING 2025-06-12 11:30:38,783 log 6569 6192082944 Not Found: /favicon.ico
+WARNING 2025-06-12 11:30:38,784 basehttp 6569 6192082944 "GET /favicon.ico HTTP/1.1" 404 4645
+INFO 2025-06-12 11:31:48,151 autoreload 6569 8484986624 /Users/daniyal/Documents/Deployed/main/views.py changed, reloading.
+INFO 2025-06-12 11:31:48,548 autoreload 6683 8484986624 Watching for file changes with StatReloader
+INFO 2025-06-12 11:31:50,208 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 40654
+WARNING 2025-06-12 11:32:10,464 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 11:32:10,466 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 11:38:17,882 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 40653
+WARNING 2025-06-12 11:38:17,974 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 11:38:17,976 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 11:38:25,880 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 40653
+WARNING 2025-06-12 11:38:29,690 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 11:38:29,690 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 11:39:09,043 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 40654
+WARNING 2025-06-12 11:39:09,152 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 11:39:09,152 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-12 11:39:18,350 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 11:39:18,350 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-12 11:40:00,576 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 11:40:00,577 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 11:40:32,830 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 40654
+WARNING 2025-06-12 11:40:32,899 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 11:40:32,899 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-12 11:40:39,026 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 11:40:39,027 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-12 11:41:05,020 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 11:41:05,020 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 11:41:50,950 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 40654
+WARNING 2025-06-12 11:41:59,414 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 11:41:59,414 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 11:42:57,182 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 40655
+WARNING 2025-06-12 11:42:57,275 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 11:42:57,275 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-12 11:44:07,446 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 11:44:07,447 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 11:50:26,651 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 44329
+WARNING 2025-06-12 11:50:26,816 basehttp 6683 6198521856 "GET /static/services/web-dev-overview.jpg HTTP/1.1" 404 2014
+INFO 2025-06-12 11:51:35,255 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 46377
+WARNING 2025-06-12 11:51:35,808 basehttp 6683 6198521856 "GET /static/services/web-dev-overview.jpg HTTP/1.1" 404 2014
+INFO 2025-06-12 11:53:33,653 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 46390
+WARNING 2025-06-12 11:53:33,812 basehttp 6683 6198521856 "GET /static/images/services/website-development_2.jpeg HTTP/1.1" 404 2053
+INFO 2025-06-12 11:54:07,887 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 46379
+INFO 2025-06-12 11:54:08,029 basehttp 6683 6198521856 "GET /static/services/web-development_2.jpeg HTTP/1.1" 200 260287
+INFO 2025-06-12 11:54:17,217 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 46379
+INFO 2025-06-12 11:54:20,307 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 46379
+INFO 2025-06-12 11:57:51,833 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 44476
+INFO 2025-06-12 11:57:51,941 basehttp 6683 6198521856 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+WARNING 2025-06-12 11:58:04,894 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 11:58:04,895 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-12 12:00:11,523 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 12:00:11,525 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-12 12:00:31,391 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 12:00:31,392 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 12:02:09,605 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 44500
+INFO 2025-06-12 12:02:09,786 basehttp 6683 6198521856 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+WARNING 2025-06-12 12:02:43,270 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 12:02:43,274 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-12 12:03:13,463 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 12:03:13,469 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 12:04:18,103 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 44601
+WARNING 2025-06-12 12:04:18,205 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-06-12 12:04:18,206 basehttp 6683 6215348224 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+WARNING 2025-06-12 12:04:18,207 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 12:04:57,775 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 44593
+INFO 2025-06-12 12:06:17,604 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45160
+INFO 2025-06-12 12:06:17,692 basehttp 6683 6198521856 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+WARNING 2025-06-12 12:06:19,218 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 12:06:19,218 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 12:08:20,160 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45184
+WARNING 2025-06-12 12:08:20,241 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 12:08:20,241 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 12:08:20,413 basehttp 6683 6198521856 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 12:08:29,527 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45184
+INFO 2025-06-12 12:08:34,575 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45184
+INFO 2025-06-12 12:08:42,859 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45184
+INFO 2025-06-12 12:09:02,130 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45142
+WARNING 2025-06-12 12:09:09,584 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 12:09:09,586 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 12:09:24,251 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45142
+WARNING 2025-06-12 12:09:24,334 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 12:09:24,334 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 12:09:55,448 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45173
+INFO 2025-06-12 15:39:42,605 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45224
+INFO 2025-06-12 15:39:42,769 basehttp 6683 6198521856 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-06-12 15:39:42,892 basehttp 6683 6198521856 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 15:47:56,756 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45665
+INFO 2025-06-12 15:56:04,455 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45811
+INFO 2025-06-12 15:56:41,672 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45815
+WARNING 2025-06-12 15:56:52,437 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 15:56:52,439 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-12 15:58:32,091 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 15:58:32,093 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 15:59:06,906 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45838
+WARNING 2025-06-12 15:59:07,012 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 15:59:07,012 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-12 15:59:25,567 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 15:59:25,569 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 16:01:16,239 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45838
+WARNING 2025-06-12 16:01:16,492 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 16:01:16,493 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 16:02:15,843 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45838
+WARNING 2025-06-12 16:02:15,958 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 16:02:15,959 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 16:02:56,767 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45840
+INFO 2025-06-12 16:02:56,881 basehttp 6683 6198521856 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 16:03:19,482 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 45840
+WARNING 2025-06-12 16:04:37,235 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 16:04:37,236 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-12 16:05:28,364 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 16:05:28,367 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 16:07:13,337 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 46481
+WARNING 2025-06-12 16:07:13,504 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 16:07:13,504 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-12 16:07:25,459 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 16:07:25,460 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 16:28:03,852 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 56697
+INFO 2025-06-12 16:28:04,254 basehttp 6683 6198521856 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+WARNING 2025-06-12 16:28:35,130 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 16:28:35,131 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 16:29:10,797 basehttp 6683 6198521856 "GET /static/services/custom-software-development.jpg HTTP/1.1" 200 1904195
+INFO 2025-06-12 17:05:52,913 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 57111
+INFO 2025-06-12 17:05:53,041 basehttp 6683 6198521856 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 17:07:21,384 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 57184
+WARNING 2025-06-12 17:07:34,020 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:07:34,022 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:08:56,647 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 57190
+WARNING 2025-06-12 17:08:56,780 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:08:56,780 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:10:20,768 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 57184
+WARNING 2025-06-12 17:10:20,848 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:10:20,857 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:12:06,857 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 57184
+WARNING 2025-06-12 17:12:06,991 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:12:06,992 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:14:52,825 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 57266
+WARNING 2025-06-12 17:14:52,917 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:14:52,917 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:16:40,195 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 57273
+WARNING 2025-06-12 17:16:41,197 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:16:41,239 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:16:54,720 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 57266
+WARNING 2025-06-12 17:16:54,964 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:16:54,970 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:18:04,042 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 57184
+WARNING 2025-06-12 17:18:04,133 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:18:04,133 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:18:45,567 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 57190
+WARNING 2025-06-12 17:18:45,795 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:18:45,796 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:19:46,887 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 57214
+WARNING 2025-06-12 17:19:46,998 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:19:46,999 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:20:27,400 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 57213
+WARNING 2025-06-12 17:20:27,652 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:20:27,654 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:21:09,244 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 57217
+INFO 2025-06-12 17:29:20,780 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61422
+INFO 2025-06-12 17:29:20,897 basehttp 6683 6198521856 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-06-12 17:34:39,940 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61979
+INFO 2025-06-12 17:35:17,918 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61973
+INFO 2025-06-12 17:39:42,979 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61964
+WARNING 2025-06-12 17:39:43,125 basehttp 6683 6198521856 "GET /static/services/custom_web_development HTTP/1.1" 404 2020
+INFO 2025-06-12 17:39:43,142 basehttp 6683 6215348224 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 17:39:56,151 basehttp 6683 6215348224 "GET /services/website-development/ HTTP/1.1" 200 61969
+INFO 2025-06-12 17:39:56,235 basehttp 6683 6215348224 "GET /static/services/custom_web_development.webp HTTP/1.1" 200 70380
+INFO 2025-06-12 17:40:38,977 basehttp 6683 6215348224 "GET /services/website-development/ HTTP/1.1" 200 61974
+WARNING 2025-06-12 17:40:39,171 basehttp 6683 6215348224 "GET /static/servicese/e-commerce_development.jpg HTTP/1.1" 404 2035
+INFO 2025-06-12 17:40:39,186 basehttp 6683 6198521856 "GET /static/services/CMS.jpg HTTP/1.1" 200 2068637
+INFO 2025-06-12 17:41:05,850 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61973
+INFO 2025-06-12 17:41:05,998 basehttp 6683 6215348224 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:41:06,016 basehttp 6683 6198521856 "GET /static/services/e-commerce_development.jpg HTTP/1.1" 200 1530425
+WARNING 2025-06-12 17:41:17,585 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:41:17,588 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:42:58,333 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61973
+INFO 2025-06-12 17:42:58,457 basehttp 6683 6215348224 "GET /static/services/e-commerce_development.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:42:58,556 basehttp 6683 6232174592 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+WARNING 2025-06-12 17:42:58,594 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:42:58,594 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:42:59,536 basehttp 6683 6249000960 "GET /static/services/CMS.jpg HTTP/1.1" 200 2068637
+WARNING 2025-06-12 17:43:13,172 log 6683 6198521856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 17:43:13,173 basehttp 6683 6198521856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 17:43:39,752 basehttp 6683 6198521856 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:44:17,204 basehttp 6683 6198521856 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:45:36,630 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61979
+INFO 2025-06-12 17:45:36,695 basehttp 6683 6198521856 "GET /static/images/deployed-logo-blur.png HTTP/1.1" 304 0
+INFO 2025-06-12 17:45:36,695 basehttp 6683 6215348224 "GET /static/services/custom-software-development.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:45:36,705 basehttp 6683 6215348224 "GET /static/services/e-commerce_development.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:45:36,705 basehttp 6683 6232174592 "GET /static/js/countries.js HTTP/1.1" 304 0
+INFO 2025-06-12 17:45:36,724 basehttp 6683 6198521856 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:45:36,725 basehttp 6683 6215348224 "GET /static/services/web-development.png HTTP/1.1" 304 0
+INFO 2025-06-12 17:45:36,726 basehttp 6683 6249000960 "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2025-06-12 17:45:36,728 basehttp 6683 6232174592 "GET /static/services/UI%3AUX.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 17:45:43,349 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61985
+INFO 2025-06-12 17:46:10,864 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61981
+INFO 2025-06-12 17:46:27,667 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61980
+INFO 2025-06-12 17:46:27,701 basehttp 6683 6198521856 "GET /static/services/e-commerce_development.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:46:27,715 basehttp 6683 6198521856 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:47:43,201 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61984
+INFO 2025-06-12 17:47:43,294 basehttp 6683 6198521856 "GET /static/services/e-commerce_development.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:47:43,294 basehttp 6683 6215348224 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:47:43,300 basehttp 6683 6232174592 "GET /static/services/UI%3AUX_web.jpeg HTTP/1.1" 200 524086
+ERROR 2025-06-12 17:51:44,938 log 6683 6198521856 Internal Server Error: /services/website-development/
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Documents/Deployed/main/views.py", line 48, in web_development
+    return render(request, 'main/services/web_development.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/templatetags/static.py", line 171, in do_static
+    return StaticNode.handle_token(parser, token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/templatetags/static.py", line 145, in handle_token
+    path = parser.compile_filter(bits[1])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''services/website_maintainence.jpg' from ''services/website_maintainence.jpg'
+ERROR 2025-06-12 17:51:44,951 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 500 214436
+ERROR 2025-06-12 17:52:26,457 log 6683 6198521856 Internal Server Error: /services/website-development/
+Traceback (most recent call last):
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Documents/Deployed/main/views.py", line 48, in web_development
+    return render(request, 'main/services/web_development.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/templatetags/static.py", line 171, in do_static
+    return StaticNode.handle_token(parser, token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/templatetags/static.py", line 145, in handle_token
+    path = parser.compile_filter(bits[1])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/daniyal/Desktop/deployed_website/venv/lib/python3.12/site-packages/django/template/base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''services/website_maintainence.jpg' from ''services/website_maintainence.jpg'
+ERROR 2025-06-12 17:52:26,464 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 500 214436
+INFO 2025-06-12 17:52:51,598 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61951
+INFO 2025-06-12 17:52:51,677 basehttp 6683 6198521856 "GET /static/services/e-commerce_development.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:52:51,678 basehttp 6683 6215348224 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:52:51,693 basehttp 6683 6215348224 "GET /static/services/UI%3AUX_web.jpeg HTTP/1.1" 304 0
+WARNING 2025-06-12 17:52:51,709 basehttp 6683 6265827328 "GET /static/services/Performance_optimization HTTP/1.1" 404 2026
+INFO 2025-06-12 17:52:51,745 basehttp 6683 6249000960 "GET /static/services/web_security.jpg HTTP/1.1" 200 548184
+INFO 2025-06-12 17:52:51,757 basehttp 6683 6215348224 "GET /static/services/SEO_Digital_marketing.jpg HTTP/1.1" 200 1175911
+INFO 2025-06-12 17:52:51,765 basehttp 6683 6232174592 "GET /static/services/website_maintainence.jpg HTTP/1.1" 200 2009442
+INFO 2025-06-12 17:52:51,766 basehttp 6683 6198521856 "GET /static/services/api_integeration.jpeg HTTP/1.1" 200 1958911
+INFO 2025-06-12 17:53:12,470 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61951
+INFO 2025-06-12 17:53:12,519 basehttp 6683 6198521856 "GET /static/services/web_security.jpg HTTP/1.1" 304 0
+WARNING 2025-06-12 17:53:12,534 basehttp 6683 6198521856 "GET /static/services/Perfromance_optimization HTTP/1.1" 404 2026
+INFO 2025-06-12 17:53:35,083 basehttp 6683 6198521856 "GET /services/website-development/ HTTP/1.1" 200 61955
+INFO 2025-06-12 17:53:35,127 basehttp 6683 6198521856 "GET /static/services/UI%3AUX_web.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 17:53:35,144 basehttp 6683 6198521856 "GET /static/services/api_integeration.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 17:53:35,146 basehttp 6683 6215348224 "GET /static/services/website_maintainence.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:53:35,146 basehttp 6683 6249000960 "GET /static/services/web_security.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:53:35,146 basehttp 6683 6198521856 "GET /static/services/SEO_Digital_marketing.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 17:53:35,155 basehttp 6683 6232174592 "GET /static/services/Perfromance_optimization.jpg HTTP/1.1" 200 1049046
+INFO 2025-06-12 18:51:34,625 autoreload 18636 8484986624 Watching for file changes with StatReloader
+INFO 2025-06-12 18:52:44,010 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 61955
+INFO 2025-06-12 18:52:44,240 basehttp 18636 6141718528 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 18:52:44,241 basehttp 18636 6124892160 "GET /static/services/e-commerce_development.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 18:52:44,245 basehttp 18636 6124892160 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 18:52:44,249 basehttp 18636 6124892160 "GET /static/services/UI%3AUX_web.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 18:52:44,251 basehttp 18636 6124892160 "GET /static/services/website_maintainence.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 18:52:44,252 basehttp 18636 6141718528 "GET /static/services/api_integeration.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 18:52:44,254 basehttp 18636 6141718528 "GET /static/services/SEO_Digital_marketing.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 18:52:44,259 basehttp 18636 6141718528 "GET /static/services/web_security.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 18:52:44,267 basehttp 18636 6141718528 "GET /static/services/Perfromance_optimization.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 19:18:50,232 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62063
+INFO 2025-06-12 19:18:50,579 basehttp 18636 6141718528 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 19:18:50,582 basehttp 18636 6141718528 "GET /static/services/Perfromance_optimization.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 19:18:50,584 basehttp 18636 6141718528 "GET /static/services/SEO_Digital_marketing.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 19:18:50,585 basehttp 18636 6158544896 "GET /static/services/UI%3AUX_web.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 19:18:50,585 basehttp 18636 6175371264 "GET /static/services/api_integeration.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 19:18:50,592 basehttp 18636 6124892160 "GET /static/services/e-commerce_development.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 19:18:50,615 basehttp 18636 6124892160 "GET /static/services/web_security.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 19:18:50,627 basehttp 18636 6209024000 "GET /static/services/website_maintainence.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 19:18:50,825 basehttp 18636 6192197632 "GET /static/services/why_choose_deployed.png HTTP/1.1" 200 903110
+WARNING 2025-06-12 19:18:58,233 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 19:18:58,234 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 19:19:46,911 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62118
+WARNING 2025-06-12 19:19:47,024 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 19:19:47,024 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 19:19:47,025 basehttp 18636 6141718528 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 19:24:20,168 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62258
+WARNING 2025-06-12 19:24:20,352 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 19:24:20,353 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 19:24:20,411 basehttp 18636 6124892160 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+WARNING 2025-06-12 19:24:39,638 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 19:24:39,640 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 19:25:24,333 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62276
+WARNING 2025-06-12 19:25:24,409 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 19:25:24,410 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 19:25:24,497 basehttp 18636 6124892160 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 19:25:38,168 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62301
+WARNING 2025-06-12 19:25:38,338 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 19:25:38,339 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 19:25:54,427 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62303
+WARNING 2025-06-12 19:25:54,536 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 19:25:54,536 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 19:27:31,304 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62311
+WARNING 2025-06-12 19:27:31,486 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 19:27:31,486 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 19:27:31,499 basehttp 18636 6141718528 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 19:57:45,576 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62311
+WARNING 2025-06-12 19:57:45,718 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 19:57:45,721 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 19:57:45,721 basehttp 18636 6141718528 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-06-12 19:57:45,786 basehttp 18636 6124892160 "GET /static/services/e-commerce_development.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 19:57:45,792 basehttp 18636 6141718528 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 19:57:45,916 basehttp 18636 6124892160 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 19:57:45,928 basehttp 18636 13035925504 "GET /static/services/website_maintainence.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 19:57:46,008 basehttp 18636 6158544896 "GET /static/services/api_integeration.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 19:57:46,019 basehttp 18636 6141718528 "GET /static/services/UI%3AUX_web.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 19:57:46,020 basehttp 18636 13052751872 "GET /static/services/SEO_Digital_marketing.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 19:57:46,023 basehttp 18636 13069578240 "GET /static/services/web_security.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 19:57:46,033 basehttp 18636 6124892160 "GET /static/services/Perfromance_optimization.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 19:57:46,161 basehttp 18636 6141718528 "GET /static/services/why_choose_deployed.png HTTP/1.1" 200 918417
+INFO 2025-06-12 19:58:13,979 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62094
+WARNING 2025-06-12 19:58:14,118 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 19:58:14,128 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 19:58:14,179 basehttp 18636 6124892160 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 19:59:48,452 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62175
+WARNING 2025-06-12 19:59:48,584 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 19:59:48,586 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 19:59:48,592 basehttp 18636 6141718528 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:00:19,644 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62215
+WARNING 2025-06-12 20:00:19,746 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 20:00:19,747 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 20:00:19,798 basehttp 18636 6124892160 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:00:27,959 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62215
+WARNING 2025-06-12 20:00:28,071 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 20:00:28,071 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 20:00:43,202 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62215
+INFO 2025-06-12 20:00:43,299 basehttp 18636 6141718528 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+WARNING 2025-06-12 20:00:43,311 log 18636 6124892160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 20:00:43,312 basehttp 18636 6124892160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 20:06:05,463 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62392
+INFO 2025-06-12 20:06:05,593 basehttp 18636 6124892160 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:06:05,603 basehttp 18636 6141718528 "GET /static/services/our_web_process.png HTTP/1.1" 200 981565
+INFO 2025-06-12 20:07:24,263 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62520
+INFO 2025-06-12 20:07:24,415 basehttp 18636 6124892160 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:07:24,416 basehttp 18636 6141718528 "GET /static/services/our_web_process.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:07:41,802 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62547
+INFO 2025-06-12 20:07:51,701 basehttp 18636 6124892160 "GET /services/website-development/ HTTP/1.1" 200 62546
+INFO 2025-06-12 20:07:51,747 basehttp 18636 6124892160 "GET /static/services/our_web_process.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:09:04,946 autoreload 22865 8484986624 Watching for file changes with StatReloader
+INFO 2025-06-12 20:10:30,716 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 60311
+INFO 2025-06-12 20:10:31,100 basehttp 22865 6160707584 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:10:31,105 basehttp 22865 6160707584 "GET /static/services/our_web_process.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:33:34,517 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 68242
+INFO 2025-06-12 20:33:35,257 basehttp 22865 6160707584 "GET /static/services/e-commerce_development.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 20:33:35,278 basehttp 22865 6160707584 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 20:33:35,287 basehttp 22865 6160707584 "GET /static/services/UI%3AUX_web.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 20:33:35,288 basehttp 22865 6177533952 "GET /static/services/api_integeration.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 20:33:35,289 basehttp 22865 6177533952 "GET /static/services/website_maintainence.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 20:33:35,289 basehttp 22865 6160707584 "GET /static/services/SEO_Digital_marketing.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 20:33:35,292 basehttp 22865 6160707584 "GET /static/services/web_security.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 20:33:35,316 basehttp 22865 6177533952 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:33:35,316 basehttp 22865 6160707584 "GET /static/services/Perfromance_optimization.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 20:33:35,319 basehttp 22865 6177533952 "GET /static/services/our_web_process.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:35:43,845 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 67953
+INFO 2025-06-12 20:36:31,776 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 67957
+INFO 2025-06-12 20:38:09,337 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 67957
+INFO 2025-06-12 20:38:09,818 basehttp 22865 6160707584 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:38:09,820 basehttp 22865 6177533952 "GET /static/services/our_web_process.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:40:20,003 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 68198
+INFO 2025-06-12 20:40:46,038 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 68198
+INFO 2025-06-12 20:41:11,083 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 68204
+INFO 2025-06-12 20:41:11,879 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 68204
+INFO 2025-06-12 20:41:27,894 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 68235
+WARNING 2025-06-12 20:41:39,915 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 20:41:39,916 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 20:42:28,250 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 68291
+WARNING 2025-06-12 20:42:28,353 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 20:42:28,362 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 20:42:28,363 basehttp 22865 6177533952 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:42:28,388 basehttp 22865 6177533952 "GET /static/services/our_web_process.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:46:45,650 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 68405
+INFO 2025-06-12 20:46:45,930 basehttp 22865 6160707584 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+WARNING 2025-06-12 20:46:45,957 basehttp 22865 6160707584 "GET /static/services/coming-soon-icon.png HTTP/1.1" 404 2014
+WARNING 2025-06-12 20:46:45,961 basehttp 22865 6194360320 "GET /static/services/healthcare-icon.png HTTP/1.1" 404 2011
+INFO 2025-06-12 20:46:45,968 basehttp 22865 6211186688 "GET /static/services/our_web_process.png HTTP/1.1" 304 0
+WARNING 2025-06-12 20:46:46,031 basehttp 22865 6228013056 "GET /static/services/logistics-icon.png HTTP/1.1" 404 2008
+WARNING 2025-06-12 20:46:46,032 basehttp 22865 6177533952 "GET /static/services/finance-icon.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 20:46:46,034 basehttp 22865 6160707584 "GET /static/services/education-icon.png HTTP/1.1" 404 2008
+INFO 2025-06-12 20:51:31,499 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 68459
+INFO 2025-06-12 20:51:31,654 basehttp 22865 6160707584 "GET /static/services/e-commerce_development.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 20:51:31,657 basehttp 22865 6177533952 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 20:51:31,682 basehttp 22865 6160707584 "GET /static/services/api_integeration.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 20:51:31,684 basehttp 22865 6194360320 "GET /static/services/website_maintainence.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 20:51:31,685 basehttp 22865 6160707584 "GET /static/services/Perfromance_optimization.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 20:51:31,685 basehttp 22865 6177533952 "GET /static/services/UI%3AUX_web.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 20:51:31,715 basehttp 22865 6211186688 "GET /static/services/SEO_Digital_marketing.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 20:51:31,715 basehttp 22865 6177533952 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:51:31,718 basehttp 22865 6160707584 "GET /static/services/our_web_process.png HTTP/1.1" 304 0
+INFO 2025-06-12 20:51:31,719 basehttp 22865 6228013056 "GET /static/services/web_security.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 20:52:21,704 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69440
+INFO 2025-06-12 20:52:46,235 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69440
+WARNING 2025-06-12 20:52:46,433 basehttp 22865 6160707584 "GET /static/services/coming-soon-icon.png HTTP/1.1" 404 2014
+INFO 2025-06-12 20:52:54,900 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69449
+INFO 2025-06-12 20:53:21,967 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69449
+INFO 2025-06-12 20:53:22,591 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69449
+WARNING 2025-06-12 20:53:44,788 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 20:53:44,789 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 21:00:51,213 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69458
+INFO 2025-06-12 21:00:51,370 basehttp 22865 6160707584 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:00:51,370 basehttp 22865 6177533952 "GET /static/services/our_web_process.png HTTP/1.1" 304 0
+WARNING 2025-06-12 21:01:02,694 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 21:01:02,695 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 21:02:35,200 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69628
+INFO 2025-06-12 21:02:55,366 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69778
+INFO 2025-06-12 21:03:13,552 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69856
+INFO 2025-06-12 21:03:50,180 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 70019
+INFO 2025-06-12 21:04:16,378 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 70019
+INFO 2025-06-12 21:04:17,890 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 70019
+WARNING 2025-06-12 21:04:25,012 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 21:04:25,013 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 21:04:27,761 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 70019
+WARNING 2025-06-12 21:04:27,821 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 21:04:27,821 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 21:04:56,447 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 70019
+WARNING 2025-06-12 21:04:56,551 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 21:04:56,551 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 21:05:54,722 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 70174
+INFO 2025-06-12 21:12:50,668 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 75035
+INFO 2025-06-12 21:12:50,863 basehttp 22865 6160707584 "GET /static/services/e-commerce_development.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 21:12:50,875 basehttp 22865 6160707584 "GET /static/services/UI%3AUX_web.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 21:12:50,889 basehttp 22865 6211186688 "GET /static/services/website_maintainence.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 21:12:50,889 basehttp 22865 6194360320 "GET /static/services/api_integeration.jpeg HTTP/1.1" 304 0
+INFO 2025-06-12 21:12:50,891 basehttp 22865 6177533952 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 21:12:50,995 basehttp 22865 6160707584 "GET /static/services/web_security.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 21:12:50,999 basehttp 22865 6244839424 "GET /static/services/Perfromance_optimization.jpg HTTP/1.1" 304 0
+INFO 2025-06-12 21:12:51,000 basehttp 22865 6228013056 "GET /static/services/SEO_Digital_marketing.jpg HTTP/1.1" 304 0
+WARNING 2025-06-12 21:12:51,024 basehttp 22865 6194360320 "GET /static/services/tech-stack-1.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:12:51,027 basehttp 22865 6228013056 "GET /static/services/tech-stack-3.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:12:51,028 basehttp 22865 6244839424 "GET /static/services/tech-stack-5.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:12:51,034 basehttp 22865 6211186688 "GET /static/services/tech-stack-4.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:12:51,034 basehttp 22865 6177533952 "GET /static/services/tech-stack-2.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:12:51,034 basehttp 22865 6160707584 "GET /static/services/tech-stack-7.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:12:51,041 basehttp 22865 6194360320 "GET /static/services/tech-stack-8.png HTTP/1.1" 404 2002
+INFO 2025-06-12 21:12:51,052 basehttp 22865 6160707584 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+WARNING 2025-06-12 21:12:51,052 basehttp 22865 6228013056 "GET /static/services/tech-stack-6.png HTTP/1.1" 404 2002
+INFO 2025-06-12 21:12:51,054 basehttp 22865 6177533952 "GET /static/services/our_web_process.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:14:47,490 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 75026
+WARNING 2025-06-12 21:14:47,651 basehttp 22865 6177533952 "GET /static/services/tech-stack-2.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:14:47,663 basehttp 22865 6194360320 "GET /static/services/tech-stack-3.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:14:47,686 basehttp 22865 6211186688 "GET /static/services/tech-stack-4.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:14:47,701 basehttp 22865 6177533952 "GET /static/services/tech-stack-5.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:14:47,744 basehttp 22865 6194360320 "GET /static/services/tech-stack-6.png HTTP/1.1" 404 2002
+INFO 2025-06-12 21:14:47,744 basehttp 22865 6160707584 "GET /static/services/aws.png HTTP/1.1" 200 14731
+WARNING 2025-06-12 21:14:47,745 basehttp 22865 6177533952 "GET /static/services/tech-stack-8.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:14:47,748 basehttp 22865 6211186688 "GET /static/services/tech-stack-7.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:14:54,357 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 21:14:54,358 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 21:16:11,068 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 75030
+WARNING 2025-06-12 21:16:11,223 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 21:16:11,224 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-12 21:16:11,320 basehttp 22865 6160707584 "GET /static/services/tech-stack-2.png HTTP/1.1" 404 2002
+INFO 2025-06-12 21:16:11,325 basehttp 22865 6194360320 "GET /static/services/aws.png HTTP/1.1" 304 0
+WARNING 2025-06-12 21:16:11,343 basehttp 22865 6211186688 "GET /static/services/tech-stack-4.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:16:11,361 basehttp 22865 6228013056 "GET /static/services/tech-stack-5.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:16:11,362 basehttp 22865 6160707584 "GET /static/services/tech-stack-6.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:16:11,355 basehttp 22865 6177533952 "GET /static/services/tech-stack-3.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:16:11,374 basehttp 22865 6194360320 "GET /static/services/tech-stack-8.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:16:11,418 basehttp 22865 6244839424 "GET /static/services/tech-stack-7.png HTTP/1.1" 404 2002
+INFO 2025-06-12 21:17:48,546 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 75437
+WARNING 2025-06-12 21:17:48,721 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 21:17:48,727 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 21:17:48,851 basehttp 22865 6160707584 "GET /static/services/aws.png HTTP/1.1" 304 0
+WARNING 2025-06-12 21:17:48,851 basehttp 22865 6177533952 "GET /static/services/tech-stack-2.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:17:48,975 basehttp 22865 6194360320 "GET /static/services/tech-stack-3.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:17:49,011 basehttp 22865 6211186688 "GET /static/services/tech-stack-4.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:17:49,114 basehttp 22865 6160707584 "GET /static/services/tech-stack-7.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:17:49,120 basehttp 22865 6194360320 "GET /static/services/tech-stack-6.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:17:49,121 basehttp 22865 6177533952 "GET /static/services/tech-stack-5.png HTTP/1.1" 404 2002
+WARNING 2025-06-12 21:17:49,139 basehttp 22865 6228013056 "GET /static/services/tech-stack-8.png HTTP/1.1" 404 2002
+INFO 2025-06-12 21:19:04,158 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 75404
+INFO 2025-06-12 21:19:04,327 basehttp 22865 6211186688 "GET /static/services/apache.png HTTP/1.1" 200 12568
+INFO 2025-06-12 21:19:04,327 basehttp 22865 6160707584 "GET /static/services/mongodb.png HTTP/1.1" 200 11277
+INFO 2025-06-12 21:19:04,328 basehttp 22865 6194360320 "GET /static/services/postgresql.png HTTP/1.1" 200 16089
+INFO 2025-06-12 21:19:04,330 basehttp 22865 6228013056 "GET /static/services/selenium.png HTTP/1.1" 200 9656
+INFO 2025-06-12 21:19:04,362 basehttp 22865 6160707584 "GET /static/services/aws.png HTTP/1.1" 304 0
+WARNING 2025-06-12 21:19:04,370 basehttp 22865 6211186688 "GET /static/services/kubernets.png HTTP/1.1" 404 1993
+INFO 2025-06-12 21:19:04,388 basehttp 22865 6244839424 "GET /static/services/mysql.png HTTP/1.1" 200 10528
+INFO 2025-06-12 21:19:04,396 basehttp 22865 6177533952 "GET /static/services/docker.png HTTP/1.1" 200 21364
+INFO 2025-06-12 21:19:36,296 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 75405
+INFO 2025-06-12 21:19:36,519 basehttp 22865 6177533952 "GET /static/services/postgresql.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:19:36,536 basehttp 22865 6194360320 "GET /static/services/apache.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:19:36,536 basehttp 22865 6160707584 "GET /static/services/kubernetes.png HTTP/1.1" 200 14067
+INFO 2025-06-12 21:19:36,589 basehttp 22865 6228013056 "GET /static/services/selenium.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:19:36,591 basehttp 22865 6211186688 "GET /static/services/mongodb.png HTTP/1.1" 304 0
+WARNING 2025-06-12 21:19:41,750 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 21:19:41,751 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 21:21:02,575 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 75405
+WARNING 2025-06-12 21:21:03,174 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-06-12 21:21:03,168 basehttp 22865 6228013056 "GET /static/services/docker.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:21:03,180 basehttp 22865 6177533952 "GET /static/services/postgresql.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:21:03,186 basehttp 22865 6244839424 "GET /static/services/kubernetes.png HTTP/1.1" 304 0
+WARNING 2025-06-12 21:21:03,203 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 21:21:03,203 basehttp 22865 6194360320 "GET /static/services/mysql.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:21:03,235 basehttp 22865 6211186688 "GET /static/services/mongodb.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:21:03,235 basehttp 22865 6177533952 "GET /static/services/apache.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:21:03,244 basehttp 22865 6244839424 "GET /static/services/aws.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:21:03,237 basehttp 22865 6228013056 "GET /static/services/selenium.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:21:03,251 basehttp 22865 6177533952 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:21:03,252 basehttp 22865 6228013056 "GET /static/services/our_web_process.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:21:15,100 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 75405
+INFO 2025-06-12 21:21:40,286 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 75405
+INFO 2025-06-12 21:22:14,964 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 77229
+INFO 2025-06-12 21:22:15,035 basehttp 22865 6160707584 "GET /static/services/aws.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:22:15,058 basehttp 22865 6160707584 "GET /static/services/docker.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:22:15,060 basehttp 22865 6177533952 "GET /static/services/kubernetes.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:22:15,067 basehttp 22865 6177533952 "GET /static/services/mysql.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:22:15,068 basehttp 22865 6194360320 "GET /static/services/mongodb.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:22:15,068 basehttp 22865 6211186688 "GET /static/services/selenium.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:22:15,069 basehttp 22865 6160707584 "GET /static/services/postgresql.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:22:15,070 basehttp 22865 6228013056 "GET /static/services/apache.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:25:21,772 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 77223
+INFO 2025-06-12 21:25:21,941 basehttp 22865 6194360320 "GET /static/services/vuejs.png HTTP/1.1" 200 10056
+INFO 2025-06-12 21:25:21,941 basehttp 22865 6160707584 "GET /static/services/angular.png HTTP/1.1" 200 9425
+INFO 2025-06-12 21:25:21,945 basehttp 22865 6244839424 "GET /static/services/typescript.png HTTP/1.1" 200 9510
+INFO 2025-06-12 21:25:21,945 basehttp 22865 6194360320 "GET /static/services/nextjs.png HTTP/1.1" 200 8370
+INFO 2025-06-12 21:25:21,946 basehttp 22865 6211186688 "GET /static/services/svelte.png HTTP/1.1" 200 8233
+INFO 2025-06-12 21:25:21,947 basehttp 22865 6244839424 "GET /static/services/aws.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:25:21,947 basehttp 22865 6244839424 "GET /static/services/apache.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:25:21,949 basehttp 22865 6194360320 "GET /static/services/kubernetes.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:25:21,950 basehttp 22865 6160707584 "GET /static/services/js.png HTTP/1.1" 200 14228
+INFO 2025-06-12 21:25:21,950 basehttp 22865 6194360320 "GET /static/services/postgresql.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:25:21,950 basehttp 22865 6244839424 "GET /static/services/mongodb.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:25:21,950 basehttp 22865 6177533952 "GET /static/services/react.png HTTP/1.1" 200 28726
+INFO 2025-06-12 21:25:21,951 basehttp 22865 6194360320 "GET /static/services/selenium.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:25:21,951 basehttp 22865 6211186688 "GET /static/services/docker.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:25:21,952 basehttp 22865 6244839424 "GET /static/services/mysql.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:25:21,964 basehttp 22865 6228013056 "GET /static/services/firebase.png HTTP/1.1" 200 52057
+INFO 2025-06-12 21:26:55,078 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 79052
+WARNING 2025-06-12 21:26:55,251 basehttp 22865 6160707584 "GET /static/services/tailwindcss.png HTTP/1.1" 404 1999
+INFO 2025-06-12 21:26:55,253 basehttp 22865 6194360320 "GET /static/services/terraform.png HTTP/1.1" 200 7602
+INFO 2025-06-12 21:26:55,256 basehttp 22865 6177533952 "GET /static/services/neo4j.png HTTP/1.1" 200 10066
+INFO 2025-06-12 21:26:55,258 basehttp 22865 6228013056 "GET /static/services/redis.png HTTP/1.1" 200 14124
+INFO 2025-06-12 21:26:55,270 basehttp 22865 6228013056 "GET /static/services/react.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,299 basehttp 22865 6194360320 "GET /static/services/laravel.png HTTP/1.1" 200 8097
+INFO 2025-06-12 21:26:55,301 basehttp 22865 6244839424 "GET /static/services/cassandra.png HTTP/1.1" 200 55384
+INFO 2025-06-12 21:26:55,301 basehttp 22865 6177533952 "GET /static/services/kubernetes.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,301 basehttp 22865 6228013056 "GET /static/services/js.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,305 basehttp 22865 6244839424 "GET /static/services/vuejs.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,321 basehttp 22865 6194360320 "GET /static/services/selenium.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,328 basehttp 22865 6177533952 "GET /static/services/svelte.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,328 basehttp 22865 6244839424 "GET /static/services/nextjs.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,332 basehttp 22865 6228013056 "GET /static/services/aws.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,333 basehttp 22865 6160707584 "GET /static/services/boostrap.png HTTP/1.1" 200 17846
+INFO 2025-06-12 21:26:55,335 basehttp 22865 6194360320 "GET /static/services/firebase.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,336 basehttp 22865 6211186688 "GET /static/services/gitlab.png HTTP/1.1" 200 65671
+INFO 2025-06-12 21:26:55,338 basehttp 22865 6228013056 "GET /static/services/postgresql.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,339 basehttp 22865 6244839424 "GET /static/services/mongodb.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,339 basehttp 22865 6160707584 "GET /static/services/angular.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,347 basehttp 22865 6194360320 "GET /static/services/apache.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,348 basehttp 22865 6177533952 "GET /static/services/docker.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,351 basehttp 22865 6211186688 "GET /static/services/typescript.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:26:55,353 basehttp 22865 6228013056 "GET /static/services/mysql.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:27:17,933 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 79053
+INFO 2025-06-12 21:27:18,080 basehttp 22865 6160707584 "GET /static/services/tailwindcss.webp HTTP/1.1" 200 3374
+INFO 2025-06-12 21:27:18,081 basehttp 22865 6177533952 "GET /static/services/gitlab.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:27:18,086 basehttp 22865 6244839424 "GET /static/services/neo4j.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:27:18,087 basehttp 22865 6211186688 "GET /static/services/redis.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:27:18,087 basehttp 22865 6160707584 "GET /static/services/laravel.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:27:18,088 basehttp 22865 6194360320 "GET /static/services/boostrap.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:27:18,093 basehttp 22865 6228013056 "GET /static/services/cassandra.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:27:18,093 basehttp 22865 6177533952 "GET /static/services/terraform.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,091 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 80224
+INFO 2025-06-12 21:28:38,166 basehttp 22865 6160707584 "GET /static/services/aws.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,196 basehttp 22865 6160707584 "GET /static/services/docker.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,199 basehttp 22865 6177533952 "GET /static/services/kubernetes.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,203 basehttp 22865 6160707584 "GET /static/services/mysql.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,211 basehttp 22865 6194360320 "GET /static/services/mongodb.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,228 basehttp 22865 6228013056 "GET /static/services/apache.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,229 basehttp 22865 6211186688 "GET /static/services/selenium.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,232 basehttp 22865 6160707584 "GET /static/services/firebase.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,234 basehttp 22865 6177533952 "GET /static/services/postgresql.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,241 basehttp 22865 6244839424 "GET /static/services/js.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,244 basehttp 22865 6244839424 "GET /static/services/angular.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,246 basehttp 22865 6228013056 "GET /static/services/mocha.png HTTP/1.1" 200 24870
+INFO 2025-06-12 21:28:38,249 basehttp 22865 6211186688 "GET /static/services/ansible.png HTTP/1.1" 200 8271
+INFO 2025-06-12 21:28:38,249 basehttp 22865 6177533952 "GET /static/services/joker.png HTTP/1.1" 200 23471
+INFO 2025-06-12 21:28:38,250 basehttp 22865 6244839424 "GET /static/services/nextjs.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,252 basehttp 22865 6228013056 "GET /static/services/svelte.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,254 basehttp 22865 6160707584 "GET /static/services/cypress.png HTTP/1.1" 200 13579
+INFO 2025-06-12 21:28:38,258 basehttp 22865 6194360320 "GET /static/services/digitaloccean.png HTTP/1.1" 200 10218
+INFO 2025-06-12 21:28:38,259 basehttp 22865 6177533952 "GET /static/services/tailwindcss.webp HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,260 basehttp 22865 6177533952 "GET /static/services/redis.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,261 basehttp 22865 6228013056 "GET /static/services/boostrap.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,261 basehttp 22865 6194360320 "GET /static/services/react.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,263 basehttp 22865 6194360320 "GET /static/services/cassandra.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,263 basehttp 22865 6160707584 "GET /static/services/vuejs.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,264 basehttp 22865 6211186688 "GET /static/services/gitlab.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,264 basehttp 22865 6244839424 "GET /static/services/typescript.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,264 basehttp 22865 6228013056 "GET /static/services/terraform.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,264 basehttp 22865 6177533952 "GET /static/services/laravel.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:28:38,265 basehttp 22865 6244839424 "GET /static/services/neo4j.png HTTP/1.1" 304 0
+WARNING 2025-06-12 21:28:46,073 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-12 21:28:46,074 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 21:29:53,440 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 80225
+INFO 2025-06-12 21:29:53,768 basehttp 22865 6177533952 "GET /static/services/laravel.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,769 basehttp 22865 6177533952 "GET /static/services/react.png HTTP/1.1" 304 0
+WARNING 2025-06-12 21:29:53,791 log 22865 6160707584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-06-12 21:29:53,791 basehttp 22865 6177533952 "GET /static/services/redis.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,793 basehttp 22865 6194360320 "GET /static/services/angular.png HTTP/1.1" 304 0
+WARNING 2025-06-12 21:29:53,809 basehttp 22865 6160707584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-12 21:29:53,810 basehttp 22865 6194360320 "GET /static/services/mocha.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,814 basehttp 22865 6177533952 "GET /static/services/gitlab.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,815 basehttp 22865 6211186688 "GET /static/services/ansible.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,827 basehttp 22865 6177533952 "GET /static/services/vuejs.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,827 basehttp 22865 6228013056 "GET /static/services/terraform.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,830 basehttp 22865 6244839424 "GET /static/services/nextjs.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,831 basehttp 22865 6211186688 "GET /static/services/tailwindcss.webp HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,833 basehttp 22865 6160707584 "GET /static/services/digitaloccean.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,834 basehttp 22865 6194360320 "GET /static/services/cypress.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,848 basehttp 22865 6177533952 "GET /static/services/cassandra.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,848 basehttp 22865 6228013056 "GET /static/services/neo4j.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,850 basehttp 22865 6244839424 "GET /static/services/boostrap.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,862 basehttp 22865 6160707584 "GET /static/services/svelte.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,888 basehttp 22865 6211186688 "GET /static/services/joker.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,892 basehttp 22865 6244839424 "GET /static/services/our_web_process.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:29:53,894 basehttp 22865 6160707584 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,823 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69094
+INFO 2025-06-12 21:30:41,973 basehttp 22865 6160707584 "GET /static/services/aws.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,975 basehttp 22865 6194360320 "GET /static/services/kubernetes.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,978 basehttp 22865 6177533952 "GET /static/services/docker.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,986 basehttp 22865 6211186688 "GET /static/services/mysql.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,992 basehttp 22865 6244839424 "GET /static/services/mongodb.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,992 basehttp 22865 6177533952 "GET /static/services/firebase.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,992 basehttp 22865 6228013056 "GET /static/services/postgresql.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,987 basehttp 22865 6160707584 "GET /static/services/apache.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,991 basehttp 22865 6194360320 "GET /static/services/selenium.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,994 basehttp 22865 6211186688 "GET /static/services/js.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,997 basehttp 22865 6177533952 "GET /static/services/vuejs.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,997 basehttp 22865 6228013056 "GET /static/services/react.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,997 basehttp 22865 6160707584 "GET /static/services/typescript.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,998 basehttp 22865 6194360320 "GET /static/services/svelte.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:41,999 basehttp 22865 6244839424 "GET /static/services/angular.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,001 basehttp 22865 6228013056 "GET /static/services/laravel.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,001 basehttp 22865 6211186688 "GET /static/services/nextjs.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,003 basehttp 22865 6177533952 "GET /static/services/cassandra.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,004 basehttp 22865 6160707584 "GET /static/services/boostrap.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,006 basehttp 22865 6194360320 "GET /static/services/tailwindcss.webp HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,009 basehttp 22865 6228013056 "GET /static/services/ansible.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,009 basehttp 22865 6244839424 "GET /static/services/redis.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,011 basehttp 22865 6211186688 "GET /static/services/neo4j.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,013 basehttp 22865 6160707584 "GET /static/services/gitlab.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,014 basehttp 22865 6177533952 "GET /static/services/terraform.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,014 basehttp 22865 6228013056 "GET /static/services/mocha.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,014 basehttp 22865 6194360320 "GET /static/services/digitaloccean.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,016 basehttp 22865 6211186688 "GET /static/services/cypress.png HTTP/1.1" 304 0
+INFO 2025-06-12 21:30:42,018 basehttp 22865 6244839424 "GET /static/services/joker.png HTTP/1.1" 304 0
+WARNING 2025-06-12 21:30:52,833 log 22865 6244839424 Not Found: /sw.js
+WARNING 2025-06-12 21:30:52,834 basehttp 22865 6244839424 "GET /sw.js HTTP/1.1" 404 4627
+INFO 2025-06-12 21:30:56,760 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69094
+INFO 2025-06-12 21:31:17,199 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69094

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Services | Deployed{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="hero-container">
+        <h1 class="hero-title">Our Services</h1>
+        <p class="hero-description">
+            Comprehensive technology solutions to transform your business and drive growth.
+        </p>
+    </div>
+</section>
+
+<section class="services-section">
+    <div class="services-container">
+        <div class="services-header">
+            <div class="services-subtitle">WHAT WE OFFER</div>
+            <h2 class="services-title">Complete Technology Solutions</h2>
+        </div>
+        
+        {% if services %}
+            {% for service in services %}
+                {% if forloop.counter0|divisibleby:4 %}
+                    <div class="services-grid services-row">
+                {% endif %}
+                
+                <div class="service-card">
+                    <img src="{{ service.image.url }}" alt="{{ service.name }}" class="service-image">
+                    <h3 class="service-name">{{ service.name }}</h3>
+                </div>
+                
+                {% if forloop.counter|divisibleby:4 or forloop.last %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <!-- Fallback static services -->
+            <div class="services-grid services-row">
+                <div class="service-card">
+                    <img src="{% static 'services/web-development.png' %}" alt="Web Development" class="service-image">
+                    <h3 class="service-name">Web Development</h3>
+                </div>
+                <div class="service-card">
+                    <img src="{% static 'services/mobile-app-development.webp' %}" alt="Mobile Apps" class="service-image">
+                    <h3 class="service-name">Mobile Apps</h3>
+                </div>
+                <div class="service-card">
+                    <img src="{% static 'services/cloud-services.webp' %}" alt="Cloud Solutions" class="service-image">
+                    <h3 class="service-name">Cloud Solutions</h3>
+                </div>
+                <div class="service-card">
+                    <img src="{% static 'services/AI.jpg' %}" alt="AI & Machine Learning" class="service-image">
+                    <h3 class="service-name">Generative AI</h3>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="contact-container">
+        <div class="contact-left">
+            <h2 class="contact-title">Ready to start your project?</h2>
+            <p class="contact-description">
+                Let's discuss how our services can help transform your business.
+            </p>
+            <a href="{% url 'main:contact' %}" class="featured-cta">Get Started</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
