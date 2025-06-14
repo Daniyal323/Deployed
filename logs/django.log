@@ -1319,3 +1319,135 @@ WARNING 2025-06-12 21:30:52,833 log 22865 6244839424 Not Found: /sw.js
 WARNING 2025-06-12 21:30:52,834 basehttp 22865 6244839424 "GET /sw.js HTTP/1.1" 404 4627
 INFO 2025-06-12 21:30:56,760 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69094
 INFO 2025-06-12 21:31:17,199 basehttp 22865 6160707584 "GET /services/website-development/ HTTP/1.1" 200 69094
+INFO 2025-06-14 20:14:17,627 autoreload 29233 8484986624 Watching for file changes with StatReloader
+INFO 2025-06-14 20:14:20,421 basehttp 29233 6167703552 "GET / HTTP/1.1" 200 49437
+INFO 2025-06-14 20:14:20,680 basehttp 29233 6218182656 "GET /static/services/mobile-app-development.webp HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,687 basehttp 29233 6184529920 "GET /static/images/deployed-logo-blur.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,687 basehttp 29233 6218182656 "GET /static/js/countries.js HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,693 basehttp 29233 6201356288 "GET /static/services/web-development.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,702 basehttp 29233 6218182656 "GET /static/services/dynamics365.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,707 basehttp 29233 6251835392 "GET /static/services/AI.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,710 basehttp 29233 6235009024 "GET /static/services/cloud-services.webp HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,711 basehttp 29233 6201356288 "GET /static/services/data-analytics.webp HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,722 basehttp 29233 6251835392 "GET /static/services/game-dev.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,724 basehttp 29233 6218182656 "GET /static/services/AR%3AVR%3AXR.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,726 basehttp 29233 6235009024 "GET /static/services/web3.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,728 basehttp 29233 6201356288 "GET /static/services/staff-augmentation.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,729 basehttp 29233 6184529920 "GET /static/js/main.js HTTP/1.1" 200 23480
+INFO 2025-06-14 20:14:20,731 basehttp 29233 6235009024 "GET /static/services/gaming-art.webp HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,731 basehttp 29233 6184529920 "GET /static/services/QA.avif HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,732 basehttp 29233 6167703552 "GET /static/css/main.css HTTP/1.1" 200 42175
+INFO 2025-06-14 20:14:20,746 basehttp 29233 6235009024 "GET /static/services/Saas.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,747 basehttp 29233 6251835392 "GET /static/services/cloud-migrations.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,748 basehttp 29233 6201356288 "GET /static/services/devops.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,749 basehttp 29233 6184529920 "GET /static/services/UI%3AUX.jpeg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,749 basehttp 29233 6218182656 "GET /static/services/metaverse.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,749 basehttp 29233 6167703552 "GET /static/services/e-commerce.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,752 basehttp 29233 6167703552 "GET /static/services/custom-software-development.jpg HTTP/1.1" 304 0
+WARNING 2025-06-14 20:14:20,764 basehttp 29233 6184529920 "GET /static/services/meeting-fallback.jpg HTTP/1.1" 404 2014
+INFO 2025-06-14 20:14:20,764 basehttp 29233 6218182656 "GET /static/services/meeting.mp4 HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:20,764 basehttp 29233 6167703552 "GET /static/services/maintenance-support.webp HTTP/1.1" 304 0
+WARNING 2025-06-14 20:14:21,907 log 29233 6167703552 Not Found: /sw.js
+WARNING 2025-06-14 20:14:21,908 basehttp 29233 6167703552 "GET /sw.js HTTP/1.1" 404 4627
+INFO 2025-06-14 20:14:25,202 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69094
+INFO 2025-06-14 20:14:25,286 basehttp 29233 6184529920 "GET /static/services/CMS.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,305 basehttp 29233 6184529920 "GET /static/services/UI%3AUX_web.jpeg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,328 basehttp 29233 6167703552 "GET /static/services/e-commerce_development.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,328 basehttp 29233 6201356288 "GET /static/services/web-development_2.jpeg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,394 basehttp 29233 6218182656 "GET /static/services/api_integeration.jpeg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,417 basehttp 29233 6201356288 "GET /static/services/Perfromance_optimization.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,418 basehttp 29233 6184529920 "GET /static/services/SEO_Digital_marketing.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,428 basehttp 29233 6235009024 "GET /static/services/website_maintainence.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,431 basehttp 29233 6167703552 "GET /static/services/web_security.jpg HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,437 basehttp 29233 6184529920 "GET /static/services/our_web_process.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,446 basehttp 29233 6218182656 "GET /static/services/why_choose_deployed.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,454 basehttp 29233 6201356288 "GET /static/services/kubernetes.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,458 basehttp 29233 6235009024 "GET /static/services/docker.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,461 basehttp 29233 6184529920 "GET /static/services/mysql.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,462 basehttp 29233 6167703552 "GET /static/services/aws.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,465 basehttp 29233 6218182656 "GET /static/services/selenium.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,467 basehttp 29233 6251835392 "GET /static/services/postgresql.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,468 basehttp 29233 6235009024 "GET /static/services/typescript.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,469 basehttp 29233 6201356288 "GET /static/services/mongodb.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,469 basehttp 29233 6184529920 "GET /static/services/apache.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,471 basehttp 29233 6167703552 "GET /static/services/js.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,471 basehttp 29233 6218182656 "GET /static/services/firebase.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,477 basehttp 29233 6251835392 "GET /static/services/angular.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,478 basehttp 29233 6201356288 "GET /static/services/nextjs.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,484 basehttp 29233 6235009024 "GET /static/services/react.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,485 basehttp 29233 6184529920 "GET /static/services/vuejs.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,490 basehttp 29233 6251835392 "GET /static/services/laravel.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,493 basehttp 29233 6235009024 "GET /static/services/redis.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,495 basehttp 29233 6167703552 "GET /static/services/tailwindcss.webp HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,496 basehttp 29233 6218182656 "GET /static/services/svelte.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,496 basehttp 29233 6251835392 "GET /static/services/neo4j.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,498 basehttp 29233 6235009024 "GET /static/services/terraform.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,499 basehttp 29233 6201356288 "GET /static/services/boostrap.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,500 basehttp 29233 6184529920 "GET /static/services/cassandra.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,501 basehttp 29233 6167703552 "GET /static/services/gitlab.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,507 basehttp 29233 6251835392 "GET /static/services/ansible.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,507 basehttp 29233 6184529920 "GET /static/services/joker.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,508 basehttp 29233 6235009024 "GET /static/services/digitaloccean.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,510 basehttp 29233 6201356288 "GET /static/services/mocha.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:14:25,510 basehttp 29233 6167703552 "GET /static/services/cypress.png HTTP/1.1" 304 0
+INFO 2025-06-14 20:17:36,209 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69122
+INFO 2025-06-14 20:21:37,278 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 74487
+WARNING 2025-06-14 20:22:39,494 log 29233 6167703552 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-14 20:22:39,495 basehttp 29233 6167703552 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-14 20:23:51,696 log 29233 6167703552 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-14 20:23:51,697 basehttp 29233 6167703552 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-14 20:24:07,705 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69122
+INFO 2025-06-14 20:27:18,808 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69122
+INFO 2025-06-14 20:28:01,946 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69120
+INFO 2025-06-14 20:29:01,684 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69236
+INFO 2025-06-14 20:30:06,258 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69365
+WARNING 2025-06-14 20:30:17,073 log 29233 6167703552 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-14 20:30:17,077 basehttp 29233 6167703552 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-14 20:30:42,864 basehttp 29233 6167703552 "GET /static/services/why_choose_deployed.png HTTP/1.1" 200 918417
+INFO 2025-06-14 20:30:46,984 basehttp 29233 6184529920 "GET /services/website-development/ HTTP/1.1" 200 69364
+INFO 2025-06-14 20:33:24,216 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69495
+INFO 2025-06-14 20:33:40,797 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69495
+INFO 2025-06-14 20:33:55,616 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69495
+WARNING 2025-06-14 20:34:16,636 log 29233 6167703552 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-14 20:34:16,639 basehttp 29233 6167703552 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-14 20:35:03,806 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69495
+INFO 2025-06-14 20:35:16,538 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69495
+INFO 2025-06-14 20:35:24,158 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69495
+INFO 2025-06-14 20:35:29,008 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69495
+INFO 2025-06-14 20:35:30,415 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69495
+INFO 2025-06-14 20:36:50,908 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 72530
+INFO 2025-06-14 20:39:53,072 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69508
+INFO 2025-06-14 20:40:09,838 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69365
+INFO 2025-06-14 20:45:16,725 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69864
+WARNING 2025-06-14 20:45:49,999 log 29233 6167703552 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-14 20:45:50,000 basehttp 29233 6167703552 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-14 20:49:24,702 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69866
+WARNING 2025-06-14 20:49:24,907 log 29233 6167703552 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-14 20:49:24,907 basehttp 29233 6167703552 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+WARNING 2025-06-14 20:49:31,283 log 29233 6167703552 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-14 20:49:31,283 basehttp 29233 6167703552 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-14 20:50:06,872 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69866
+WARNING 2025-06-14 20:50:06,980 log 29233 6167703552 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-14 20:50:06,980 basehttp 29233 6167703552 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756
+INFO 2025-06-14 20:52:48,305 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69932
+INFO 2025-06-14 20:52:49,770 basehttp 29233 6167703552 "GET / HTTP/1.1" 200 49505
+WARNING 2025-06-14 20:52:49,844 basehttp 29233 6167703552 "GET /static/services/meeting-fallback.jpg HTTP/1.1" 404 2014
+WARNING 2025-06-14 20:52:51,666 log 29233 6184529920 Not Found: /sw.js
+WARNING 2025-06-14 20:52:51,670 basehttp 29233 6184529920 "GET /sw.js HTTP/1.1" 404 4627
+INFO 2025-06-14 20:53:05,175 basehttp 29233 6167703552 "GET / HTTP/1.1" 200 49536
+WARNING 2025-06-14 20:53:05,289 basehttp 29233 6167703552 "GET /static/services/meeting-fallback.jpg HTTP/1.1" 404 2014
+WARNING 2025-06-14 20:53:05,813 log 29233 6184529920 Not Found: /sw.js
+WARNING 2025-06-14 20:53:05,813 basehttp 29233 6184529920 "GET /sw.js HTTP/1.1" 404 4627
+INFO 2025-06-14 20:53:06,705 basehttp 29233 6184529920 "GET / HTTP/1.1" 200 49536
+WARNING 2025-06-14 20:53:06,832 basehttp 29233 6184529920 "GET /static/services/meeting-fallback.jpg HTTP/1.1" 404 2014
+WARNING 2025-06-14 20:53:07,203 log 29233 6167703552 Not Found: /sw.js
+WARNING 2025-06-14 20:53:07,203 basehttp 29233 6167703552 "GET /sw.js HTTP/1.1" 404 4627
+INFO 2025-06-14 20:53:09,252 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69963
+INFO 2025-06-14 20:53:10,162 basehttp 29233 6167703552 "GET / HTTP/1.1" 200 49536
+WARNING 2025-06-14 20:53:10,338 basehttp 29233 6167703552 "GET /static/services/meeting-fallback.jpg HTTP/1.1" 404 2014
+WARNING 2025-06-14 20:53:10,835 log 29233 6184529920 Not Found: /sw.js
+WARNING 2025-06-14 20:53:10,837 basehttp 29233 6184529920 "GET /sw.js HTTP/1.1" 404 4627
+INFO 2025-06-14 20:53:12,545 basehttp 29233 6184529920 "GET /services/website-development/ HTTP/1.1" 200 69963
+INFO 2025-06-14 20:53:31,404 basehttp 29233 6167703552 "GET /services/website-development/ HTTP/1.1" 200 69963
+WARNING 2025-06-14 20:53:40,832 log 29233 6167703552 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-06-14 20:53:40,834 basehttp 29233 6167703552 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4756

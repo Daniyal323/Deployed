@@ -8,6 +8,7 @@
 /* Add font family to all elements */
 * {
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 /* Hero Section Styles */
@@ -730,9 +731,20 @@
 
 .full-image{
     background: white;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .full-image img{
-    margin-left: 15%;
+    /* margin-left: 15%; */
+    width: 90%;
+    max-width: 1400px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Industries Section - Updated */
@@ -963,13 +975,16 @@
     gap: 2rem;
     margin-top: 3rem;
     justify-items: center;
+    align-items: center;
 }
+
 
 .tech-stack-item {
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
 .tech-stack-item:hover {
@@ -1025,19 +1040,20 @@
     }
     
     .tech-stack-grid {
-        gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.5rem;
     }
     
     .tech-stack-icon {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 }
 
 @media (max-width: 992px) {
     .tech-stack-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.5rem;
     }
     
     .tech-stack-icon {
@@ -1049,7 +1065,7 @@
 @media (max-width: 768px) {
     .tech-stack-grid {
         grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
+        gap: 1rem;
     }
     
     .tech-stack-title {
@@ -1058,6 +1074,18 @@
     
     .tech-stack-description {
         font-size: 1.1rem;
+    }
+    
+    .tech-stack-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tech-stack-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
     
     .tech-stack-icon {
@@ -1081,12 +1109,24 @@
     
     .tech-stack-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1rem;
     }
     
     .tech-stack-icon {
         width: 80px;
         height: 80px;
+    }
+}
+
+@media (max-width: 360px) {
+    .tech-stack-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+    
+    .tech-stack-icon {
+        width: 70px;
+        height: 70px;
     }
 }
 
@@ -1152,7 +1192,7 @@
 <section class="enterprise-section">
     <div class="enterprise-container">
         <div class="enterprise-header">
-            <h2 class="enterprise-title">Seamless & Enterprise-ready Web<br>s Development</h2>
+            <h2 class="enterprise-title">Seamless & Enterprise-ready Web<br>Development</h2>
         </div>
         
         <div class="enterprise-grid">

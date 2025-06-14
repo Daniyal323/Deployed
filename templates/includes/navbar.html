@@ -1,7 +1,8 @@
 {% load static %}
 <nav class="navbar" id="navbar">
     <div class="navbar-left">
-        <div class="logo-container">
+        <!-- <div class="logo-container"> -->
+            <a href="{% url 'main:home' %}" class="logo-container" style="text-decoration: none;">
             <img src="{% static 'images/deployed-logo-blur.png' %}" alt="Deployed Logo" class="logo-image">
             <div class="logo">Deployed</div>
         </div>
@@ -10,7 +11,7 @@
                 <input type="checkbox" id="themeToggle">
                 <span class="slider"></span>
             </label>
-        </div>
+        <!-- </div> -->
     </div>
     
     <!-- Desktop Navigation -->
