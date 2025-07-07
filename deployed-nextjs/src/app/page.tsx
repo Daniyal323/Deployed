@@ -517,7 +517,7 @@ export default function Home() {
                 <textarea className="form-textarea" name="project_details" placeholder="Tell us about your project requirements, timeline, and any specific needs..." required></textarea>
               </div>
               
-              <ReCaptcha siteKey="6LcXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" />
+              <ReCaptcha siteKey="6LeawlorAAAAADLtluLbhQr5AgjEJ3axOznVe04_" />
               
               <button type="submit" className="submit-btn" id="submitBtn" ref={submitBtnRef}>
                 <span id="submitText" ref={submitTextRef}>Submit</span>
