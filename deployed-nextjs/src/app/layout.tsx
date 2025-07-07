@@ -69,6 +69,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="icon" href="/images/deployed-logo-blur.png" type="image/png" />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       </head>
       <body className={`${inter.variable} antialiased`} suppressHydrationWarning={true}>

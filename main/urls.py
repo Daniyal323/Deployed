@@ -12,4 +12,5 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('contact/ajax/', views.contact_ajax, name='contact_ajax'),
     path('contact-submit/', views.contact_submit, name='contact_submit'),
+    path('api/contact', views.contact_submit, name='api_contact'),
 ]
