@@ -87,7 +87,7 @@ export default function Home() {
     }
 
     // Check if reCAPTCHA is completed
-    const recaptchaResponse = (window as any).grecaptcha?.getResponse();
+    const recaptchaResponse = (window as unknown as { grecaptcha?: { getResponse: () => string } }).grecaptcha?.getResponse();
     if (!recaptchaResponse) {
       showError('Please complete the reCAPTCHA verification.');
       return;
@@ -114,7 +114,7 @@ export default function Home() {
       if (data.success) {
         showSuccess(data.message);
         form.reset();
-        (window as any).grecaptcha?.reset();
+        (window as unknown as { grecaptcha?: { reset: () => void } }).grecaptcha?.reset();
       } else {
         showError(data.message || 'An error occurred. Please try again.');
       }
@@ -216,7 +216,7 @@ export default function Home() {
             We help startups and enterprises deploy scalable, secure, and impactful digital products.
           </p>
           <Link href="/contact" className="hero-cta">
-            Let's Talk
+            Let&apos;s Talk
           </Link>
         </div>
       </section>
@@ -227,7 +227,7 @@ export default function Home() {
         <div className="featured-content">
           <div className="featured-left">
             <div className="featured-subtitle">PIONEERING TRUST AND INNOVATION</div>
-            <h2 className="featured-title">Deployed's Achievements</h2>
+            <h2 className="featured-title">Deployed&apos;s Achievements</h2>
             <p className="featured-description">
               We take pride in empowering businesses worldwide with innovative solutions. 
               Deployed brings an unwavering commitment to excellence, backed by a global presence.
@@ -477,7 +477,7 @@ export default function Home() {
               </div>
               
               <div className="form-group full-width">
-                <label className="form-label">Services you're looking for <span className="required">*</span></label>
+                <label className="form-label">Services you&apos;re looking for <span className="required">*</span></label>
                 <div className="services-checkboxes">
                   <div className="checkbox-item">
                     <input type="checkbox" id="remote-it" name="services" value="Remote IT Resources" />
@@ -523,8 +523,12 @@ export default function Home() {
               </button>
             </form>
           </div>
-    </div>
+        </div>
       </section>
+
+      <Link href="/contact" className="fixed-cta-button" id="fixedCtaButton">
+        Let&apos;s Talk Business
+      </Link>
 
     </>
   );

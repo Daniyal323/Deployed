@@ -87,8 +87,8 @@ export default function Careers() {
               Join Our<br />Team
             </h1>
             <p className="hero-description">
-              Be part of a team that's shaping the future of technology. 
-              We're looking for passionate individuals who want to make a difference.
+              Be part of a team that&apos;s shaping the future of technology. 
+              We&apos;re looking for passionate individuals who want to make a difference.
             </p>
             <Link href="#positions" className="hero-cta">
               View Open Positions
@@ -161,7 +161,7 @@ export default function Careers() {
               <div className="featured-subtitle">CAREER OPPORTUNITIES</div>
               <h2 className="featured-title">Open Positions</h2>
               <p className="featured-description">
-                We're always looking for talented individuals to join our team. 
+                We&apos;re always looking for talented individuals to join our team. 
                 Check out our current openings and find the perfect role for you.
               </p>
             </div>
@@ -255,11 +255,11 @@ export default function Careers() {
               </div>
             </div>
             <div className="careers-right">
-              <div className="careers-subtitle">DON'T SEE A FIT?</div>
-              <h2 className="careers-title">We're Always Looking for Talent</h2>
+              <div className="careers-subtitle">DON&apos;T SEE A FIT?</div>
+              <h2 className="careers-title">We&apos;re Always Looking for Talent</h2>
               <div className="careers-foundation">GROW WITH US</div>
               <p className="careers-description">
-                Even if you don't see a position that matches your skills, we'd love to hear from you. 
+                Even if you don&apos;t see a position that matches your skills, we&apos;d love to hear from you. 
                 Send us your resume and let us know how you can contribute to our team.
               </p>
               <Link href="/contact" className="careers-cta">Send Your Resume</Link>
@@ -269,7 +269,7 @@ export default function Careers() {
 
         {/* Fixed CTA Button */}
         <Link href="/contact" className="fixed-cta-button" id="fixedCtaButton">
-          Let's Talk Business
+          Let&apos;s Talk Business
         </Link>
       </main>
 

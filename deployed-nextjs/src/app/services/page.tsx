@@ -225,7 +225,7 @@ export default function Services() {
                   }}>
                     1
                   </span>
-                  <strong>Discovery & Planning</strong>
+                  <strong>Discovery &amp; Planning</strong>
                 </div>
                 <p style={{ marginLeft: '3rem', color: '#666', marginBottom: '1rem' }}>
                   We start by understanding your business goals, requirements, and challenges.
@@ -304,7 +304,7 @@ export default function Services() {
 
         {/* Fixed CTA Button */}
         <Link href="/contact" className="fixed-cta-button" id="fixedCtaButton">
-          Let's Talk Business
+          Let&apos;s Talk Business
         </Link>
       </main>
 

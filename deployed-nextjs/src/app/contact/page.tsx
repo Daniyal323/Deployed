@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -95,7 +95,7 @@ export default function Contact() {
         services: [],
         projectDetails: ''
       });
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
       setMessage('There was an error submitting your form. Please try again.');
     } finally {
@@ -116,7 +116,7 @@ export default function Contact() {
             </h1>
             <p className="hero-description">
               Ready to transform your business with cutting-edge software solutions? 
-              Let's discuss your project and explore how we can help you achieve your goals.
+              Let&apos;s discuss your project and explore how we can help you achieve your goals.
             </p>
           </div>
         </section>
@@ -323,7 +323,7 @@ export default function Contact() {
                 </div>
                 <h3 className="info-title">Email Us</h3>
                 <p className="info-description">
-                  Send us an email and we'll get back to you within 24 hours.
+                  Send us an email and we&apos;ll get back to you within 24 hours.
                 </p>
                 <a href="mailto:business@deployed.com" className="info-cta">
                   business@deployed.com
@@ -374,7 +374,7 @@ export default function Contact() {
 
         {/* Fixed CTA Button */}
         <Link href="/contact" className="fixed-cta-button" id="fixedCtaButton">
-          Let's Talk Business
+          Let&apos;s Talk Business
         </Link>
       </main>
 

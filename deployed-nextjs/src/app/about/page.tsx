@@ -233,10 +233,10 @@ export default function About() {
             </div>
             <div className="careers-right">
               <div className="careers-subtitle">READY TO GET STARTED?</div>
-              <h2 className="careers-title">Let's Build Something Amazing Together</h2>
+              <h2 className="careers-title">Let&apos;s Build Something Amazing Together</h2>
               <div className="careers-foundation">TRANSFORM YOUR BUSINESS</div>
               <p className="careers-description">
-                Whether you're a startup looking to disrupt the market or an enterprise seeking digital transformation, 
+                Whether you&apos;re a startup looking to disrupt the market or an enterprise seeking digital transformation, 
                 we have the expertise and passion to bring your vision to life.
               </p>
               <Link href="/contact" className="careers-cta">Start Your Project</Link>
@@ -246,7 +246,7 @@ export default function About() {
 
         {/* Fixed CTA Button */}
         <Link href="/contact" className="fixed-cta-button" id="fixedCtaButton">
-          Let's Talk Business
+          Let&apos;s Talk Business
         </Link>
       </main>
 

@@ -76,7 +76,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <Link href="/contact" className="fixed-cta-button" id="fixedCtaButton">
-          Let's Talk Business
+          Let&apos;s Talk Business
         </Link>
       </body>
     </html>

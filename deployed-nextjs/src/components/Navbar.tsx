@@ -362,7 +362,7 @@ export default function Navbar() {
         {/* Desktop CTA Buttons */}
         <div className="nav-actions">
           <Link href="/careers" className="btn primary">Explore Careers</Link>
-          <Link href="/contact" className="btn secondary">Let's Talk Business</Link>
+          <Link href="/contact" className="btn secondary">Let&apos;s Talk Business</Link>
         </div>
         
         {/* Mobile Menu Button */}
@@ -497,7 +497,7 @@ export default function Navbar() {
         {/* Mobile CTA Buttons */}
         <div className="mobile-cta">
           <Link href="/careers" className="btn primary" onClick={closeMobileMenu}>Explore Careers</Link>
-          <Link href="/contact" className="btn secondary" onClick={closeMobileMenu}>Let's Talk Business</Link>
+          <Link href="/contact" className="btn secondary" onClick={closeMobileMenu}>Let&apos;s Talk</Link>
         </div>
       </div>
     </>

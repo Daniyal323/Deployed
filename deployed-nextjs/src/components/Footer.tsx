@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronDown, MapPin, Mail, Phone, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import { ChevronDown, MapPin, Mail, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
 
 export default function Footer() {
   const [activeDropdowns, setActiveDropdowns] = useState<{ [key: string]: boolean }>({});

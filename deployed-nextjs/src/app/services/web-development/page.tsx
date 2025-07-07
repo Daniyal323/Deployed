@@ -56,7 +56,7 @@ export default function WebDevelopment() {
               <div className="card-image">
                 <Image src="/services/custom-software-development.jpg" alt="Custom Web Development" width={400} height={300} />
                 <div className="card-overlay">
-                  <p className="overlay-text">We specialize in building custom websites tailored to your unique business requirements. Our team works closely with you to understand your vision and create a fully customized web solution that meets both your functional and aesthetic goals. Whether it's a brand-new website or a platform upgrade, we ensure that the final product is scalable, user-friendly, and designed to evolve with your business.</p>
+                  <p className="overlay-text">We specialize in building custom websites tailored to your unique business requirements. Our team works closely with you to understand your vision and create a fully customized web solution that meets both your functional and aesthetic goals. Whether it&apos;s a brand-new website or a platform upgrade, we ensure that the final product is scalable, user-friendly, and designed to evolve with your business.</p>
                 </div>
               </div>
               <div className="card-content">
@@ -121,7 +121,7 @@ export default function WebDevelopment() {
               <div className="card-image">
                 <Image src="/services/api_integeration.jpeg" alt="API Integration & Development" width={400} height={300} />
                 <div className="card-overlay">
-                  <p className="overlay-text">We specialize in integrating third-party services and APIs into your web platform to enhance functionality and improve efficiency. Whether it's payment gateways, social media platforms, CRM systems, or other enterprise software, we ensure that the integration process is seamless and that all systems communicate effectively. Our team also develops custom APIs to connect your website with other platforms or services, enhancing flexibility and scalability.</p>
+                  <p className="overlay-text">We specialize in integrating third-party services and APIs into your web platform to enhance functionality and improve efficiency. Whether it&apos;s payment gateways, social media platforms, CRM systems, or other enterprise software, we ensure that the integration process is seamless and that all systems communicate effectively. Our team also develops custom APIs to connect your website with other platforms or services, enhancing flexibility and scalability.</p>
                 </div>
               </div>
               <div className="card-content">
@@ -236,7 +236,7 @@ export default function WebDevelopment() {
               <div className="industry-card">
                 <div className="industry-content">
                   <h3 className="industry-name">Education & E-learning</h3>
-                  <p className="industry-description">We build scalable Learning Management Systems (LMS) and e-learning platforms that offer interactive, customizable content and data-driven insights. Our platforms are ideal for schools, universities, and corporate training programs, providing personalized learning experiences and real-time progress tracking. Whether you're delivering courses or conducting assessments, we ensure a seamless, engaging, and effective online learning environment.</p>
+                  <p className="industry-description">We build scalable Learning Management Systems (LMS) and e-learning platforms that offer interactive, customizable content and data-driven insights. Our platforms are ideal for schools, universities, and corporate training programs, providing personalized learning experiences and real-time progress tracking. Whether you&apos;re delivering courses or conducting assessments, we ensure a seamless, engaging, and effective online learning environment.</p>
                 </div>
               </div>
               <div className="industry-card">
@@ -313,10 +313,20 @@ export default function WebDevelopment() {
         <div className="container">
           <h2 className="cta-title">Ready to Build Your Dream Website?</h2>
           <p className="cta-description">
-            Let's discuss your project and create a web solution that drives your business forward. 
+            Let&apos;s discuss your project and create a web solution that drives your business forward. 
             Get started with a free consultation today.
           </p>
           <Link href="/contact" className="cta-button">Start Your Project</Link>
+        </div>
+      </section>
+
+      {/* Fixed CTA Section */}
+      <section className="fixed-cta-section">
+        <div className="fixed-cta-container">
+          <h2 className="careers-title">Let&apos;s Build Your Next Web Solution</h2>
+          <Link href="/contact" className="fixed-cta-button" id="fixedCtaButton">
+            Let&apos;s Talk Business
+          </Link>
         </div>
       </section>
     </>

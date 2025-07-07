@@ -18,7 +18,7 @@ export default function ReCaptcha({ siteKey }: ReCaptchaProps) {
     if (!isClient || !recaptchaRef.current) return;
 
     // Load reCAPTCHA script if not already loaded
-    if (!(window as any).grecaptcha) {
+    if (!(window as unknown as { grecaptcha?: unknown }).grecaptcha) {
       const script = document.createElement('script');
       script.src = 'https://www.google.com/recaptcha/api.js';
       script.async = true;
@@ -28,20 +28,21 @@ export default function ReCaptcha({ siteKey }: ReCaptchaProps) {
 
     // Render reCAPTCHA when script is loaded
     const renderRecaptcha = () => {
-      if ((window as any).grecaptcha && recaptchaRef.current) {
-        (window as any).grecaptcha.render(recaptchaRef.current, {
+      const grecaptcha = (window as unknown as { grecaptcha?: { render: (el: HTMLElement, opts: { sitekey: string }) => void, reset: () => void, getResponse: () => string, execute: () => void } }).grecaptcha;
+      if (grecaptcha && recaptchaRef.current) {
+        grecaptcha.render(recaptchaRef.current, {
           sitekey: siteKey,
         });
       }
     };
 
     // Check if grecaptcha is already available
-    if ((window as any).grecaptcha) {
+    if ((window as unknown as { grecaptcha?: unknown }).grecaptcha) {
       renderRecaptcha();
     } else {
       // Wait for script to load
       const checkGrecaptcha = setInterval(() => {
-        if ((window as any).grecaptcha) {
+        if ((window as unknown as { grecaptcha?: unknown }).grecaptcha) {
           clearInterval(checkGrecaptcha);
           renderRecaptcha();
         }
