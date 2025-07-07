@@ -260,6 +260,7 @@ def contact_ajax(request):
             'message': 'An error occurred. Please try again.'
         })
 
+@csrf_exempt
 @require_http_methods(["POST"])
 def contact_submit(request):
     """Handle contact form submission from home page"""
