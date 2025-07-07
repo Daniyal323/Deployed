@@ -3083,7 +3083,7 @@ input:checked + .slider:before {
   border-radius: 25px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.9rem;
+    font-size: 0.9rem;
   transition: all 0.3s ease;
   font-family: Arial, sans-serif;
   align-self: flex-end;
@@ -3190,7 +3190,7 @@ input:checked + .slider:before {
   background: white;
   padding: 2rem 0;
   display: flex;
-  justify-content: center;
+    justify-content: center;
   align-items: center;
   overflow: hidden;
 }

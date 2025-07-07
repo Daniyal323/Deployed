@@ -395,7 +395,9 @@ export default function Home() {
               At Deployed, we believe our people are our greatest asset. We foster an environment where innovation thrives, 
               diversity is celebrated, and every team member has the opportunity to grow and make a meaningful impact.
             </p>
-            <Link href="/careers" className="careers-cta">Join Us</Link>
+            <Link href="/careers" className="careers-cta" style={{ display: 'block', margin: '2rem auto 0', textAlign: 'center', maxWidth: 220 }}>
+              Join Us
+            </Link>
           </div>
         </div>
       </section>
@@ -523,7 +525,7 @@ export default function Home() {
               </button>
             </form>
           </div>
-        </div>
+    </div>
       </section>
 
       <Link href="/contact" className="fixed-cta-button" id="fixedCtaButton">

@@ -106,7 +106,7 @@ export default function Footer() {
 
         <div className="footer-right">
           <div className="footer-social">
-            <a href="https://linkedin.com/company/deployed" className="footer-social-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/godeployed/" className="footer-social-link" target="_blank" rel="noopener noreferrer">
               <Linkedin size={20} />
             </a>
             <a href="https://twitter.com/deployed" className="footer-social-link" target="_blank" rel="noopener noreferrer">
@@ -115,7 +115,7 @@ export default function Footer() {
             <a href="https://facebook.com/deployed" className="footer-social-link" target="_blank" rel="noopener noreferrer">
               <Facebook size={20} />
             </a>
-            <a href="https://instagram.com/deployed" className="footer-social-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/deployed.official/" className="footer-social-link" target="_blank" rel="noopener noreferrer">
               <Instagram size={20} />
             </a>
           </div>
