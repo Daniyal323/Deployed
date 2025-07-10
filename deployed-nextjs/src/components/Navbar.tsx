@@ -145,7 +145,7 @@ export default function Navbar() {
                   </ul>
                   <strong>Data & AI</strong>
                   <ul>
-                    <li><Link href="/services">Gen AI</Link></li>
+                    <li><Link href="/services/generative-ai">Gen AI</Link></li>
                     <li><Link href="/services">Data Analytics</Link></li>
                   </ul>
                   <strong><Link href="/services">Staff Augmentation</Link></strong>
@@ -413,7 +413,7 @@ export default function Navbar() {
             <div className="mobile-nav-section">
               <strong>Data & AI</strong>
               <ul>
-                <li><Link href="/services" onClick={closeMobileMenu}>Gen AI</Link></li>
+                                    <li><Link href="/services/generative-ai" onClick={closeMobileMenu}>Gen AI</Link></li>
                 <li><Link href="/services" onClick={closeMobileMenu}>Data Analytics</Link></li>
               </ul>
             </div>
