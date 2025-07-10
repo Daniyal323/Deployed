@@ -113,7 +113,7 @@ export default function WebDevelopment() {
               <div className="card-image">
                 <Image src="/services/semantic_search.jpg" alt="Vector Semantic Search Solutions" width={400} height={300} />
                 <div className="card-overlay">
-                  <p className="overlay-text">We develop advanced vector-based semantic search systems powered by AI and natural language processing to understand user intent and deliver precise search results. Our semantic search solutions go beyond traditional keyword matching to comprehend context, meaning, and relationships within data. This enables lightning-fast information retrieval with high accuracy, providing users with relevant results even when they don't use exact search terms.</p>
+                  <p className="overlay-text">We develop advanced vector-based semantic search systems powered by AI and natural language processing to understand user intent and deliver precise search results. Our semantic search solutions go beyond traditional keyword matching to comprehend context, meaning, and relationships within data. This enables lightning-fast information retrieval with high accuracy, providing users with relevant results even when they don&apos;t use exact search terms.</p>
                 </div>
               </div>
               <div className="card-content">
