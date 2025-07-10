@@ -198,8 +198,8 @@ MESSAGE_TAGS = {
 
 # Custom settings for your app
 COMPANY_NAME = "Deployed"
-COMPANY_EMAIL = "business@deployed.com"
-COMPANY_PHONE = "+1-XXX-XXX-XXXX"
+COMPANY_EMAIL = "sales@godeployed.com"
+COMPANY_PHONE = "+92-309-4048956"
 
 # Production settings (uncomment when deploying)
 if not DEBUG:

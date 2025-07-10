@@ -41,7 +41,7 @@ export default function Footer() {
             <div className="footer-street">Leading Software Company</div>
             <div className="footer-email">
               <Mail size={16} />
-              <strong>business@deployed.com</strong>
+              <strong>sales@godeployed.com</strong>
             </div>
           </div>
           

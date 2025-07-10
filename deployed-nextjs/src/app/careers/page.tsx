@@ -273,7 +273,7 @@ export default function Careers() {
         </Link>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 } 

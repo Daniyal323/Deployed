@@ -525,7 +525,7 @@ class CompanyInfo(models.Model):
     description = models.TextField(default="We help startups and enterprises deploy scalable, secure, and impactful digital products.")
     
     # Contact information
-    email = models.EmailField(default="business@deployed.com")
+    email = models.EmailField(default="sales@godeployed.com")
     phone = models.CharField(max_length=20, blank=True)
     address = models.TextField(blank=True)
     
@@ -576,9 +576,9 @@ class SiteSettings(models.Model):
     recaptcha_secret_key = models.CharField(max_length=100, blank=True)
     
     # Email settings
-    contact_email = models.EmailField(default="business@deployed.com")
-    careers_email = models.EmailField(default="careers@deployed.com")
-    support_email = models.EmailField(default="support@deployed.com")
+    contact_email = models.EmailField(default="sales@godeployed.com")
+    careers_email = models.EmailField(default="careers@godeployed.com")
+    support_email = models.EmailField(default="support@godeployed.com")
     
     # Features
     enable_blog = models.BooleanField(default=True)

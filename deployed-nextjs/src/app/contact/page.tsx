@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ContactForm from '../../components/ContactForm';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -131,189 +132,7 @@ export default function Contact() {
                 to discuss your project requirements and provide a customized solution.
               </p>
 
-              <div className="contact-form-container">
-                <form className="contact-form" onSubmit={handleSubmit}>
-                  {submitStatus !== 'idle' && (
-                    <div className={`alert ${submitStatus === 'success' ? 'alert-success' : 'alert-error'}`}>
-                      {submitStatus === 'success' ? <CheckCircle size={20} /> : <AlertCircle size={20} />}
-                      {message}
-                    </div>
-                  )}
-
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label className="form-label">
-                        Full Name <span className="required">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        name="fullName"
-                        value={formData.fullName}
-                        onChange={handleInputChange}
-                        className="form-input"
-                        required
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label className="form-label">
-                        Email <span className="required">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        className="form-input"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label className="form-label">
-                        Phone Number <span className="required">*</span>
-                      </label>
-                      <div className="phone-group">
-                        <select
-                          name="country"
-                          value={formData.country}
-                          onChange={handleInputChange}
-                          className="country-select"
-                        >
-                          <option value="">+1</option>
-                          <option value="+44">+44</option>
-                          <option value="+91">+91</option>
-                          <option value="+86">+86</option>
-                          <option value="+81">+81</option>
-                        </select>
-                        <input
-                          type="tel"
-                          name="phoneNumber"
-                          value={formData.phoneNumber}
-                          onChange={handleInputChange}
-                          className="phone-input"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div className="form-group">
-                      <label className="form-label">
-                        Company Name <span className="required">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        name="companyName"
-                        value={formData.companyName}
-                        onChange={handleInputChange}
-                        className="form-input"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label className="form-label">Company Website</label>
-                      <input
-                        type="url"
-                        name="companyUrl"
-                        value={formData.companyUrl}
-                        onChange={handleInputChange}
-                        className="form-input"
-                        placeholder="https://example.com"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label className="form-label">
-                        Region <span className="required">*</span>
-                      </label>
-                      <select
-                        name="region"
-                        value={formData.region}
-                        onChange={handleInputChange}
-                        className="form-input"
-                        required
-                      >
-                        <option value="">Select Region</option>
-                        {regions.map(region => (
-                          <option key={region} value={region}>{region}</option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="form-group">
-                    <label className="form-label">
-                      Budget Range <span className="required">*</span>
-                    </label>
-                    <select
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      className="form-input"
-                      required
-                    >
-                      <option value="">Select Budget Range</option>
-                      {budgets.map(budget => (
-                        <option key={budget} value={budget}>{budget}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div className="form-group">
-                    <label className="form-label">
-                      Services Interested In <span className="required">*</span>
-                    </label>
-                    <div className="services-checkboxes">
-                      {services.map(service => (
-                        <div key={service} className="checkbox-item">
-                          <input
-                            type="checkbox"
-                            id={service}
-                            checked={formData.services.includes(service)}
-                            onChange={() => handleServiceChange(service)}
-                            required={formData.services.length === 0}
-                          />
-                          <label htmlFor={service}>{service}</label>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="form-group full-width">
-                    <label className="form-label">
-                      Project Details <span className="required">*</span>
-                    </label>
-                    <textarea
-                      name="projectDetails"
-                      value={formData.projectDetails}
-                      onChange={handleInputChange}
-                      className="form-textarea"
-                      rows={5}
-                      placeholder="Tell us about your project, goals, and requirements..."
-                      required
-                    />
-                  </div>
-
-                  <div className="recaptcha-container">
-                    <div className="g-recaptcha" data-sitekey="6LeawlorAAAAADLtluLbhQr5AgjEJ3axOznVe04_"></div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="submit-btn"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? 'Sending...' : (
-                      <>
-                        <Send size={20} />
-                        Send Message
-                      </>
-                    )}
-                  </button>
-                </form>
-              </div>
+              <ContactForm />
             </div>
 
             <div className="contact-right">
@@ -325,8 +144,8 @@ export default function Contact() {
                 <p className="info-description">
                   Send us an email and we&apos;ll get back to you within 24 hours.
                 </p>
-                <a href="mailto:business@deployed.com" className="info-cta">
-                  business@deployed.com
+                <a href="mailto:sales@godeployed.com" className="info-cta">
+                  sales@godeployed.com
                 </a>
               </div>
 
@@ -378,7 +197,7 @@ export default function Contact() {
         </Link>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 } 

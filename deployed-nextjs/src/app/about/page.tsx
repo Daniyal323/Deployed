@@ -250,7 +250,7 @@ export default function About() {
         </Link>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 } 

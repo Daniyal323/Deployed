@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PlexusCanvas from '@/components/PlexusCanvas';
 import ReCaptcha from '@/components/ReCaptcha';
+import ContactForm from '../components/ContactForm';
 
 export default function Home() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -279,10 +280,10 @@ export default function Home() {
               <Image src="/services/cloud-services.webp" alt="Cloud Solutions" width={200} height={200} className="service-image" />
               <h3 className="service-name">Cloud Solutions</h3>
             </div>
-            <div className="service-card">
+            <Link href="/services/generative-ai" className="service-card">
               <Image src="/services/AI.jpg" alt="AI & Machine Learning" width={200} height={200} className="service-image" />
               <h3 className="service-name">Generative AI</h3>
-            </div>
+            </Link>
           </div>
 
           {/* Second Row (Hidden Initially) */}
@@ -412,120 +413,9 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="contact-form-container">
-            {/* Success/Error Messages */}
-            <div id="form-messages" style={{ display: 'none' }} ref={messagesContainerRef}>
-              <div id="success-message" className="alert alert-success" style={{ display: 'none' }} ref={successMessageRef}></div>
-              <div id="error-message" className="alert alert-error" style={{ display: 'none' }} ref={errorMessageRef}></div>
-            </div>
-            
-            <form className="contact-form" id="contactForm" ref={formRef}>
-              <div className="form-row">
-                <div className="form-group">
-                  <label className="form-label">First Name <span className="required">*</span></label>
-                  <input type="text" className="form-input" name="first_name" required />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Last Name <span className="required">*</span></label>
-                  <input type="text" className="form-input" name="last_name" required />
-                </div>
-              </div>
-              
-              <div className="form-row">
-                <div className="form-group">
-                  <label className="form-label">Email <span className="required">*</span></label>
-                  <input type="email" className="form-input" name="email" required />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Phone Number <span className="required">*</span></label>
-                  <div className="phone-group">
-                    <select className="form-select country-select" name="country" required>
-                      <option value="">Select Country</option>
-                    </select>
-                    <input type="tel" className="form-input phone-input" name="phone_number" placeholder="Enter your number" required />
-                  </div>
-                </div>
-              </div>
-              
-              <div className="form-row">
-                <div className="form-group">
-                  <label className="form-label">Budget <span className="required">*</span></label>
-                  <input type="text" className="form-input" name="budget" placeholder="Enter your budget range (e.g., $10,000 - $50,000)" required />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Company Name <span className="required">*</span></label>
-                  <input type="text" className="form-input" name="company_name" required />
-                </div>
-              </div>
-              
-              <div className="form-row">
-                <div className="form-group">
-                  <label className="form-label">Company Domain/URL</label>
-                  <input type="url" className="form-input" name="company_url" placeholder="https://example.com" />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Region <span className="required">*</span></label>
-                  <select className="form-select" name="region" required>
-                    <option value="">Select Region</option>
-                    <option value="north-america">North America</option>
-                    <option value="south-america">South America</option>
-                    <option value="europe">Europe</option>
-                    <option value="asia-pacific">Asia Pacific</option>
-                    <option value="middle-east">Middle East</option>
-                    <option value="africa">Africa</option>
-                    <option value="oceania">Oceania</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div className="form-group full-width">
-                <label className="form-label">Services you&apos;re looking for <span className="required">*</span></label>
-                <div className="services-checkboxes">
-                  <div className="checkbox-item">
-                    <input type="checkbox" id="remote-it" name="services" value="Remote IT Resources" />
-                    <label htmlFor="remote-it">Remote IT Resources</label>
-                  </div>
-                  <div className="checkbox-item">
-                    <input type="checkbox" id="custom-software" name="services" value="Custom Software Development" />
-                    <label htmlFor="custom-software">Custom Software Development</label>
-                  </div>
-                  <div className="checkbox-item">
-                    <input type="checkbox" id="web-dev" name="services" value="Web Development" />
-                    <label htmlFor="web-dev">Web Development</label>
-                  </div>
-                  <div className="checkbox-item">
-                    <input type="checkbox" id="mobile-dev" name="services" value="Mobile App Development" />
-                    <label htmlFor="mobile-dev">Mobile App Development</label>
-                  </div>
-                  <div className="checkbox-item">
-                    <input type="checkbox" id="ar-vr" name="services" value="AR/VR" />
-                    <label htmlFor="ar-vr">AR/VR</label>
-                  </div>
-                  <div className="checkbox-item">
-                    <input type="checkbox" id="gaming" name="services" value="Gaming" />
-                    <label htmlFor="gaming">Gaming</label>
-                  </div>
-                  <div className="checkbox-item">
-                    <input type="checkbox" id="other-it" name="services" value="Other IT Services" />
-                    <label htmlFor="other-it">Other IT Services</label>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="form-group full-width">
-                <label className="form-label">Project Details <span className="required">*</span></label>
-                <textarea className="form-textarea" name="project_details" placeholder="Tell us about your project requirements, timeline, and any specific needs..." required></textarea>
-              </div>
-              
-              <ReCaptcha siteKey="6LeawlorAAAAADLtluLbhQr5AgjEJ3axOznVe04_" />
-              
-              <button type="submit" className="submit-btn" id="submitBtn" ref={submitBtnRef}>
-                <span id="submitText" ref={submitTextRef}>Submit</span>
-                <span id="submitLoader" style={{ display: 'none' }} ref={submitLoaderRef}>Submitting...</span>
-              </button>
-            </form>
-          </div>
-    </div>
+          <ContactForm />
+
+        </div>
       </section>
 
       <Link href="/contact" className="fixed-cta-button" id="fixedCtaButton">
