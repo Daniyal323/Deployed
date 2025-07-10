@@ -414,7 +414,7 @@ export default function Home() {
           
           <ContactForm />
 
-        </div>
+    </div>
       </section>
 
       <Link href="/contact" className="fixed-cta-button" id="fixedCtaButton">
