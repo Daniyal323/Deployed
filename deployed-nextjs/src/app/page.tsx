@@ -4,7 +4,6 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import PlexusCanvas from '@/components/PlexusCanvas';
-import ReCaptcha from '@/components/ReCaptcha';
 import ContactForm from '../components/ContactForm';
 
 export default function Home() {

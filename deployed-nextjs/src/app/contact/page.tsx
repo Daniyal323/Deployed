@@ -1,109 +1,11 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
-// import Image from 'next/image';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import ContactForm from '../../components/ContactForm';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phoneNumber: '',
-    country: '',
-    companyName: '',
-    companyUrl: '',
-    region: '',
-    budget: '',
-    services: [] as string[],
-    projectDetails: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [message, setMessage] = useState('');
-
-  const services = [
-    'Web Development',
-    'Mobile App Development',
-    'Cloud Solutions',
-    'AI & Machine Learning',
-    'Game Development',
-    'UI/UX Design',
-    'DevOps',
-    'Data Analytics',
-    'E-commerce',
-    'Custom Software Development'
-  ];
-
-  const regions = [
-    'North America',
-    'Europe',
-    'Asia Pacific',
-    'Latin America',
-    'Middle East & Africa'
-  ];
-
-  const budgets = [
-    'Under $10,000',
-    '$10,000 - $25,000',
-    '$25,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $250,000',
-    '$250,000+'
-  ];
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleServiceChange = (service: string) => {
-    setFormData(prev => ({
-      ...prev,
-      services: prev.services.includes(service)
-        ? prev.services.filter(s => s !== service)
-        : [...prev.services, service]
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      // Here you would typically send the data to your API
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setSubmitStatus('success');
-      setMessage('Thank you for your inquiry! We will get back to you within 24 hours.');
-      setFormData({
-        fullName: '',
-        email: '',
-        phoneNumber: '',
-        country: '',
-        companyName: '',
-        companyUrl: '',
-        region: '',
-        budget: '',
-        services: [],
-        projectDetails: ''
-      });
-    } catch {
-      setSubmitStatus('error');
-      setMessage('There was an error submitting your form. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <>
       <Navbar />

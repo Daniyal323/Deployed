@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Users, Zap, Heart, Award, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 
 export default function Careers() {
   const benefits = [
