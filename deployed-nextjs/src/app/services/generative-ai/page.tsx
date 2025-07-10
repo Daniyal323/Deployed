@@ -195,13 +195,13 @@ export default function WebDevelopment() {
               <div className="industry-card">
                 <div className="industry-content">
                   <h3 className="industry-name">Finance & Fintech</h3>
-                  <p className="industry-description">Within the financial sector, where accuracy and protection are essential, Deployed's generative AI solutions deliver intelligent analytics for enhanced, swifter strategic decisions. By examining intricate financial datasets instantaneously, our specialists proficiently bolster fraud prevention, portfolio predictions, and compliance oversight. We enable financial organizations to achieve operational excellence through AI-powered business intelligence, equipping them to maintain market leadership within regulatory frameworks.</p>
+                  <p className="industry-description">Within the financial sector, where accuracy and protection are essential, Deployed&apos;s generative AI solutions deliver intelligent analytics for enhanced, swifter strategic decisions. By examining intricate financial datasets instantaneously, our specialists proficiently bolster fraud prevention, portfolio predictions, and compliance oversight. We enable financial organizations to achieve operational excellence through AI-powered business intelligence, equipping them to maintain market leadership within regulatory frameworks.</p>
                 </div>
               </div>
               <div className="industry-card">
                 <div className="industry-content">
                   <h3 className="industry-name">Healthcare</h3>
-                  <p className="industry-description">Our advanced AI solutions are revolutionizing healthcare delivery by optimizing patient diagnostics, treatment planning, and clinical research. Deployed's intelligent systems process comprehensive medical datasets to generate personalized care protocols, empowering healthcare professionals with predictive analytics and evidence-based recommendations. Through accelerated pharmaceutical research and immersive medical training simulations, our AI technology enables healthcare institutions to implement data-driven, precision medicine approaches that enhance patient outcomes and advance medical innovation.</p>
+                  <p className="industry-description">Our advanced AI solutions are revolutionizing healthcare delivery by optimizing patient diagnostics, treatment planning, and clinical research. Deployed&apos;s intelligent systems process comprehensive medical datasets to generate personalized care protocols, empowering healthcare professionals with predictive analytics and evidence-based recommendations. Through accelerated pharmaceutical research and immersive medical training simulations, our AI technology enables healthcare institutions to implement data-driven, precision medicine approaches that enhance patient outcomes and advance medical innovation.</p>
                 </div>
               </div>
               <div className="industry-card">
@@ -216,13 +216,13 @@ export default function WebDevelopment() {
               <div className="industry-card">
                 <div className="industry-content">
                   <h3 className="industry-name">Media & Entertainment</h3>
-                  <p className="industry-description">Deployed's advanced AI solutions catalyze creativity in content creation, spanning automated storyline development and music composition to crafting engaging virtual reality environments. Our specialists assist entertainment organizations in delivering premium, captivating media at volume, enabling them to remain flexible and dynamically engage with viewers—while minimizing production schedules and maintaining artistic excellence.</p>
+                  <p className="industry-description">Deployed&apos;s advanced AI solutions catalyze creativity in content creation, spanning automated storyline development and music composition to crafting engaging virtual reality environments. Our specialists assist entertainment organizations in delivering premium, captivating media at volume, enabling them to remain flexible and dynamically engage with viewers—while minimizing production schedules and maintaining artistic excellence.</p>
                 </div>
               </div>
               <div className="industry-card">
                 <div className="industry-content">
                   <h3 className="industry-name">Education & E-learning</h3>
-                  <p className="industry-description">Deployed's generative AI solutions revolutionize educational technology by creating personalized learning experiences and intelligent content generation. Our AI-powered platforms develop adaptive curricula, generate interactive assessments, and provide real-time student feedback, enabling educational institutions to deliver customized instruction at scale. We help schools and training organizations enhance engagement through AI-driven tutoring systems, automated grading, and dynamic content creation that adapts to individual learning styles and progress.</p>
+                  <p className="industry-description">Deployed&apos;s generative AI solutions revolutionize educational technology by creating personalized learning experiences and intelligent content generation. Our AI-powered platforms develop adaptive curricula, generate interactive assessments, and provide real-time student feedback, enabling educational institutions to deliver customized instruction at scale. We help schools and training organizations enhance engagement through AI-driven tutoring systems, automated grading, and dynamic content creation that adapts to individual learning styles and progress.</p>
                 </div>
               </div>
               <div className="industry-card" style={{ opacity: 0.3, pointerEvents: 'none' }}>

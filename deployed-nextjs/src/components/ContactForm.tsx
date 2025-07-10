@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import ReCaptcha from './ReCaptcha';
 
 const ContactForm = () => {
@@ -10,22 +10,7 @@ const ContactForm = () => {
   const successMessageRef = useRef<HTMLDivElement>(null);
   const errorMessageRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    // Populate countries dropdown
-    populateCountries();
-    // Form submission
-    const form = formRef.current;
-    if (form) {
-      form.addEventListener('submit', handleFormSubmit);
-    }
-    return () => {
-      if (form) {
-        form.removeEventListener('submit', handleFormSubmit);
-      }
-    };
-  }, []);
-
-  const handleFormSubmit = async (e: Event) => {
+  const handleFormSubmit = useCallback(async (e: Event) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const submitBtn = submitBtnRef.current;
@@ -74,7 +59,22 @@ const ContactForm = () => {
       submitText.style.display = 'inline';
       submitLoader.style.display = 'none';
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    // Populate countries dropdown
+    populateCountries();
+    // Form submission
+    const form = formRef.current;
+    if (form) {
+      form.addEventListener('submit', handleFormSubmit);
+    }
+    return () => {
+      if (form) {
+        form.removeEventListener('submit', handleFormSubmit);
+      }
+    };
+  }, [handleFormSubmit]);
 
   const showSuccess = (message: string) => {
     hideMessages();

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import PlexusCanvas from '@/components/PlexusCanvas';
@@ -18,58 +18,7 @@ export default function Home() {
   const toggleTextRef = useRef<HTMLSpanElement>(null);
   const toggleIconRef = useRef<HTMLSpanElement>(null);
 
-  useEffect(() => {
-    // Services toggle functionality
-    const servicesToggle = servicesToggleRef.current;
-    const toggleText = toggleTextRef.current;
-    const toggleIcon = toggleIconRef.current;
-    let isExpanded = false;
-
-    if (servicesToggle && toggleText && toggleIcon) {
-      servicesToggle.addEventListener('click', () => {
-        const allRows = document.querySelectorAll('.services-row');
-        
-        if (!isExpanded) {
-          // Show all services
-          allRows.forEach(row => {
-            row.classList.remove('hidden');
-          });
-          toggleText.textContent = 'View Less';
-          toggleIcon.textContent = '↑';
-          isExpanded = true;
-        } else {
-          // Hide all except first row
-          allRows.forEach((row, index) => {
-            if (index === 0) {
-              row.classList.remove('hidden');
-            } else {
-              row.classList.add('hidden');
-            }
-          });
-          toggleText.textContent = 'View More';
-          toggleIcon.textContent = '↓';
-          isExpanded = false;
-        }
-      });
-    }
-
-    // Populate countries dropdown
-    populateCountries();
-
-    // Form submission
-    const form = formRef.current;
-    if (form) {
-      form.addEventListener('submit', handleFormSubmit);
-    }
-
-    return () => {
-      if (form) {
-        form.removeEventListener('submit', handleFormSubmit);
-      }
-    };
-  }, []);
-
-  const handleFormSubmit = async (e: Event) => {
+  const handleFormSubmit = useCallback(async (e: Event) => {
     e.preventDefault();
     
     const form = e.target as HTMLFormElement;
@@ -127,7 +76,58 @@ export default function Home() {
       submitText.style.display = 'inline';
       submitLoader.style.display = 'none';
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    // Services toggle functionality
+    const servicesToggle = servicesToggleRef.current;
+    const toggleText = toggleTextRef.current;
+    const toggleIcon = toggleIconRef.current;
+    let isExpanded = false;
+
+    if (servicesToggle && toggleText && toggleIcon) {
+      servicesToggle.addEventListener('click', () => {
+        const allRows = document.querySelectorAll('.services-row');
+        
+        if (!isExpanded) {
+          // Show all services
+          allRows.forEach(row => {
+            row.classList.remove('hidden');
+          });
+          toggleText.textContent = 'View Less';
+          toggleIcon.textContent = '↑';
+          isExpanded = true;
+        } else {
+          // Hide all except first row
+          allRows.forEach((row, index) => {
+            if (index === 0) {
+              row.classList.remove('hidden');
+            } else {
+              row.classList.add('hidden');
+            }
+          });
+          toggleText.textContent = 'View More';
+          toggleIcon.textContent = '↓';
+          isExpanded = false;
+        }
+      });
+    }
+
+    // Populate countries dropdown
+    populateCountries();
+
+    // Form submission
+    const form = formRef.current;
+    if (form) {
+      form.addEventListener('submit', handleFormSubmit);
+    }
+
+    return () => {
+      if (form) {
+        form.removeEventListener('submit', handleFormSubmit);
+      }
+    };
+  }, [handleFormSubmit]);
 
   const showSuccess = (message: string) => {
     hideMessages();
