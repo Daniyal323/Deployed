@@ -53,9 +53,15 @@ export const metadata: Metadata = {
     icon: [
       { url: "/images/deployed-logo-blur.png", sizes: "32x32", type: "image/png" },
       { url: "/images/deployed-logo-blur.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/deployed-logo-blur.png", sizes: "48x48", type: "image/png" },
     ],
-    apple: "/images/deployed-logo-blur.png",
+    apple: [
+      { url: "/images/deployed-logo-blur.png", sizes: "180x180", type: "image/png" },
+    ],
     shortcut: "/images/deployed-logo-blur.png",
+    other: [
+      { rel: "icon", url: "/images/deployed-logo-blur.png", type: "image/png" },
+    ],
   },
 };
 
@@ -69,7 +75,11 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="icon" href="/images/deployed-logo-blur.png" type="image/png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/deployed-logo-blur.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/images/deployed-logo-blur.png" type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" href="/images/deployed-logo-blur.png" />
+        <link rel="shortcut icon" href="/images/deployed-logo-blur.png" type="image/png" />
       </head>
       <body className={`${inter.variable} antialiased`} suppressHydrationWarning={true}>
         <Navbar />

@@ -10,6 +10,36 @@ const ContactForm = () => {
   const successMessageRef = useRef<HTMLDivElement>(null);
   const errorMessageRef = useRef<HTMLDivElement>(null);
 
+  const showSuccess = (message: string) => {
+    hideMessages();
+    if (successMessageRef.current) {
+      successMessageRef.current.textContent = message;
+      successMessageRef.current.style.display = 'block';
+    }
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.style.display = 'block';
+      messagesContainerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const showError = (message: string) => {
+    hideMessages();
+    if (errorMessageRef.current) {
+      errorMessageRef.current.textContent = message;
+      errorMessageRef.current.style.display = 'block';
+    }
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.style.display = 'block';
+      messagesContainerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const hideMessages = () => {
+    if (successMessageRef.current) successMessageRef.current.style.display = 'none';
+    if (errorMessageRef.current) errorMessageRef.current.style.display = 'none';
+    if (messagesContainerRef.current) messagesContainerRef.current.style.display = 'none';
+  };
+
   const handleFormSubmit = useCallback(async (e: Event) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
@@ -59,7 +89,7 @@ const ContactForm = () => {
       submitText.style.display = 'inline';
       submitLoader.style.display = 'none';
     }
-  }, []);
+  }, [showError, showSuccess]);
 
   useEffect(() => {
     // Populate countries dropdown
@@ -75,36 +105,6 @@ const ContactForm = () => {
       }
     };
   }, [handleFormSubmit]);
-
-  const showSuccess = (message: string) => {
-    hideMessages();
-    if (successMessageRef.current) {
-      successMessageRef.current.textContent = message;
-      successMessageRef.current.style.display = 'block';
-    }
-    if (messagesContainerRef.current) {
-      messagesContainerRef.current.style.display = 'block';
-      messagesContainerRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const showError = (message: string) => {
-    hideMessages();
-    if (errorMessageRef.current) {
-      errorMessageRef.current.textContent = message;
-      errorMessageRef.current.style.display = 'block';
-    }
-    if (messagesContainerRef.current) {
-      messagesContainerRef.current.style.display = 'block';
-      messagesContainerRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const hideMessages = () => {
-    if (successMessageRef.current) successMessageRef.current.style.display = 'none';
-    if (errorMessageRef.current) errorMessageRef.current.style.display = 'none';
-    if (messagesContainerRef.current) messagesContainerRef.current.style.display = 'none';
-  };
 
   const populateCountries = () => {
     const countrySelect = document.querySelector('.country-select') as HTMLSelectElement;

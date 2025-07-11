@@ -18,6 +18,36 @@ export default function Home() {
   const toggleTextRef = useRef<HTMLSpanElement>(null);
   const toggleIconRef = useRef<HTMLSpanElement>(null);
 
+  const showSuccess = (message: string) => {
+    hideMessages();
+    if (successMessageRef.current) {
+      successMessageRef.current.textContent = message;
+      successMessageRef.current.style.display = 'block';
+    }
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.style.display = 'block';
+      messagesContainerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const showError = (message: string) => {
+    hideMessages();
+    if (errorMessageRef.current) {
+      errorMessageRef.current.textContent = message;
+      errorMessageRef.current.style.display = 'block';
+    }
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.style.display = 'block';
+      messagesContainerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const hideMessages = () => {
+    if (successMessageRef.current) successMessageRef.current.style.display = 'none';
+    if (errorMessageRef.current) errorMessageRef.current.style.display = 'none';
+    if (messagesContainerRef.current) messagesContainerRef.current.style.display = 'none';
+  };
+
   const handleFormSubmit = useCallback(async (e: Event) => {
     e.preventDefault();
     
@@ -76,7 +106,7 @@ export default function Home() {
       submitText.style.display = 'inline';
       submitLoader.style.display = 'none';
     }
-  }, []);
+  }, [showError, showSuccess]);
 
   useEffect(() => {
     // Services toggle functionality
@@ -128,36 +158,6 @@ export default function Home() {
       }
     };
   }, [handleFormSubmit]);
-
-  const showSuccess = (message: string) => {
-    hideMessages();
-    if (successMessageRef.current) {
-      successMessageRef.current.textContent = message;
-      successMessageRef.current.style.display = 'block';
-    }
-    if (messagesContainerRef.current) {
-      messagesContainerRef.current.style.display = 'block';
-      messagesContainerRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const showError = (message: string) => {
-    hideMessages();
-    if (errorMessageRef.current) {
-      errorMessageRef.current.textContent = message;
-      errorMessageRef.current.style.display = 'block';
-    }
-    if (messagesContainerRef.current) {
-      messagesContainerRef.current.style.display = 'block';
-      messagesContainerRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const hideMessages = () => {
-    if (successMessageRef.current) successMessageRef.current.style.display = 'none';
-    if (errorMessageRef.current) errorMessageRef.current.style.display = 'none';
-    if (messagesContainerRef.current) messagesContainerRef.current.style.display = 'none';
-  };
 
   const populateCountries = () => {
     const countrySelect = document.querySelector('.country-select') as HTMLSelectElement;
