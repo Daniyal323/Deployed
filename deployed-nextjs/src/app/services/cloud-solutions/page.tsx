@@ -165,7 +165,7 @@ export default function CloudSolutions() {
                 <Image src="/services/cloud-devops-automation.jpg" alt="Cloud DevOps & Automation" width={400} height={300} />
                 <div className="card-overlay">
                   <p className="overlay-text">
-                  We apply DevOps methodologies and CI/CD pipelines to automate cloud processes, allowing quicker deployments and improved consistency. Leveraging tools such as Jenkins, GitLab CI/CD, Terraform, and Ansible, we boost collaboration, simplify operations, and accelerate time-to-market.
+                    We apply DevOps methodologies and CI/CD pipelines to automate cloud processes, allowing quicker deployments and improved consistency. Leveraging tools such as Jenkins, GitLab CI/CD, Terraform, and Ansible, we boost collaboration, simplify operations, and accelerate time-to-market.
                   </p>
                 </div>
               </div>

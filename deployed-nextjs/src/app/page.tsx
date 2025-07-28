@@ -309,10 +309,11 @@ export default function Home() {
 
           {/* Third Row (Hidden Initially) */}
           <div className="services-grid services-row hidden" id="services-row-3">
-            <div className="service-card">
-              <Image src="/services/web3.jpg" alt="Web3" width={200} height={200} className="service-image" />
-              <h3 className="service-name">Web3 Gaming</h3>
-            </div>
+          <Link href="/services/web3-gaming" className="service-card">
+          <Image src="/services/web3.jpg" alt="Web3" width={200} height={200} className="service-image" />
+          <h3 className="service-name">Web3 Gaming</h3>
+            </Link>
+           
             <div className="service-card">
               <Image src="/services/AR:VR:XR.png" alt="AR/VR/XR" width={200} height={200} className="service-image" />
               <h3 className="service-name">AR/VR/XR Gaming</h3>
