@@ -173,7 +173,10 @@ export default function Services() {
                     </ul>
                   </div>
                   <Link 
-                    href={`/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={service.name === "Web Development" ? "/services/web-development" : 
+                          service.name === "Mobile App Development" ? "/services/app-development" :
+                          service.name === "AI & Machine Learning" ? "/services/generative-ai" :
+                          `/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
                     className="featured-cta"
                     style={{ 
                       display: 'inline-block',

@@ -2643,7 +2643,7 @@ input:checked + .slider:before {
 }
 
 .website-now-section {
-  text-align: center;
+    text-align: center;
   padding: 2rem 0;
 }
 
@@ -2736,7 +2736,7 @@ input:checked + .slider:before {
   border-radius: 15px;
     display: flex;
   align-items: center;
-  justify-content: center;
+    justify-content: center;
   margin: 0 auto 1.5rem;
 }
 
@@ -2781,7 +2781,7 @@ input:checked + .slider:before {
   margin: 0 auto 1rem;
   background: #f8f9fa;
   border-radius: 8px;
-  display: flex;
+    display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -2796,7 +2796,7 @@ input:checked + .slider:before {
 .cta-section {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  text-align: center;
+    text-align: center;
   padding: 5rem 0;
 }
 
@@ -3034,7 +3034,7 @@ input:checked + .slider:before {
 }
 
 .enterprise-header {
-  text-align: center;
+    text-align: center;
   margin-bottom: 4rem;
 }
 
@@ -3278,7 +3278,7 @@ input:checked + .slider:before {
   background: white;
   padding: 0;
   display: flex;
-  justify-content: center;
+    justify-content: center;
   align-items: center;
   overflow: hidden;
   width: 100%;

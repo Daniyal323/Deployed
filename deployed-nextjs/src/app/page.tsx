@@ -271,10 +271,10 @@ export default function Home() {
               <Image src="/services/web-development.png" alt="Web Development" width={200} height={200} className="service-image" />
               <h3 className="service-name">Web Development</h3>
             </Link>
-            <div className="service-card">
+            <Link href="/services/app-development" className="service-card">
               <Image src="/services/mobile-app-development.webp" alt="Mobile Apps" width={200} height={200} className="service-image" />
               <h3 className="service-name">Mobile Apps</h3>
-            </div>
+            </Link>
             <div className="service-card">
               <Image src="/services/cloud-services.webp" alt="Cloud Solutions" width={200} height={200} className="service-image" />
               <h3 className="service-name">Cloud Solutions</h3>

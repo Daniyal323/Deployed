@@ -136,12 +136,12 @@ export default function WebDevelopment() {
             </div>
             {/* Website Maintenance & Support */}
             <div className="enterprise-card">
-                              <div className="card-image">
+              <div className="card-image">
                   <Image src="/services/text_generation.jpg" alt="AI-Powered Text Generation" width={400} height={300} />
-                  <div className="card-overlay">
+                <div className="card-overlay">
                     <p className="overlay-text">Leverage advanced generative AI technology to produce sophisticated, contextually relevant content that elevates your marketing campaigns, streamlines customer service operations, and creates comprehensive documentation. Our AI solutions generate engaging copy, personalized responses, and detailed technical content that maintains your brand voice while significantly reducing content creation time and costs.</p>
-                  </div>
                 </div>
+              </div>
               <div className="card-content">
                 <h3 className="card-title">AI-Powered Text Generation</h3>
                 <Link href="/contact" className="card-button">Get in Touch</Link>
