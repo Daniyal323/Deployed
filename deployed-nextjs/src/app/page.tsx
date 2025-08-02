@@ -271,14 +271,16 @@ export default function Home() {
               <Image src="/services/web-development.png" alt="Web Development" width={200} height={200} className="service-image" />
               <h3 className="service-name">Web Development</h3>
             </Link>
-            <Link href="/services/app-development" className="service-card">
+            <div className="service-card">
               <Image src="/services/mobile-app-development.webp" alt="Mobile Apps" width={200} height={200} className="service-image" />
               <h3 className="service-name">Mobile Apps</h3>
-            </Link>
-            <div className="service-card">
-              <Image src="/services/cloud-services.webp" alt="Cloud Solutions" width={200} height={200} className="service-image" />
-              <h3 className="service-name">Cloud Solutions</h3>
             </div>
+
+            <Link href="/services/cloud-solutions" className="service-card">
+            <Image src="/services/cloud-services.webp" alt="Cloud Solutions" width={200} height={200} className="service-image" />
+            <h3 className="service-name">Cloud Solutions</h3>
+            </Link>
+
             <Link href="/services/generative-ai" className="service-card">
               <Image src="/services/AI.jpg" alt="AI & Machine Learning" width={200} height={200} className="service-image" />
               <h3 className="service-name">Generative AI</h3>
@@ -307,10 +309,11 @@ export default function Home() {
 
           {/* Third Row (Hidden Initially) */}
           <div className="services-grid services-row hidden" id="services-row-3">
-            <div className="service-card">
-              <Image src="/services/web3.jpg" alt="Web3" width={200} height={200} className="service-image" />
-              <h3 className="service-name">Web3 Gaming</h3>
-            </div>
+          <Link href="/services/web3-gaming" className="service-card">
+          <Image src="/services/web3.jpg" alt="Web3" width={200} height={200} className="service-image" />
+          <h3 className="service-name">Web3 Gaming</h3>
+            </Link>
+           
             <div className="service-card">
               <Image src="/services/AR:VR:XR.png" alt="AR/VR/XR" width={200} height={200} className="service-image" />
               <h3 className="service-name">AR/VR/XR Gaming</h3>
