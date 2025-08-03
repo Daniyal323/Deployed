@@ -313,11 +313,12 @@ export default function Home() {
           <Image src="/services/web3.jpg" alt="Web3" width={200} height={200} className="service-image" />
           <h3 className="service-name">Web3 Gaming</h3>
             </Link>
-           
-            <div className="service-card">
-              <Image src="/services/AR:VR:XR.png" alt="AR/VR/XR" width={200} height={200} className="service-image" />
-              <h3 className="service-name">AR/VR/XR Gaming</h3>
-            </div>
+            
+            <Link href="/services/AR-VR-XR-Gaming" className="service-card">
+            <Image src="/services/AR:VR:XR.png" alt="AR/VR/XR" width={200} height={200} className="service-image" />
+            <h3 className="service-name">AR/VR/XR Gaming</h3>
+            </Link>
+            
             <div className="service-card">
               <Image src="/services/gaming-art.webp" alt="Game ART" width={200} height={200} className="service-image" />
               <h3 className="service-name">Gaming Art & Design</h3>
