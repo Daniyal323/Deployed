@@ -1,9 +1,17 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function AppDevelopment() {
   return (
     <>
+      <style jsx>{`
+        .service-hero {
+          --service-hero-image: url('/services/appdev-main.jpg');
+        }
+      `}</style>
+      
       {/* Hero Section */}
       <section className="service-hero">
         <div className="hero-content">
@@ -54,20 +62,20 @@ export default function AppDevelopment() {
             {/* Native iOS Development */}
             <div className="enterprise-card">
               <div className="card-image">
-                <Image src="/services/mobile-app-development.webp" alt="Native iOS Development" width={400} height={300} />
+                <Image src="/services/native_appdev.jpg" alt="Native Mobile App Development" width={400} height={300} />
                 <div className="card-overlay">
                   <p className="overlay-text">We specialize in building native iOS applications using Swift and SwiftUI that leverage the full power of Apple's ecosystem. Our iOS apps are designed to take advantage of iOS-specific features like Face ID, Apple Pay, Siri integration, and seamless iCloud synchronization. We ensure your app follows Apple's Human Interface Guidelines and maintains the high standards expected by iOS users.</p>
                 </div>
               </div>
               <div className="card-content">
-                <h3 className="card-title">Native iOS Development</h3>
+                <h3 className="card-title">Native Mobile App Development</h3>
                 <Link href="/contact" className="card-button">Get in Touch</Link>
               </div>
             </div>
             {/* Native Android Development */}
             <div className="enterprise-card">
               <div className="card-image">
-                <Image src="/services/mobile-app-development.webp" alt="Native Android Development" width={400} height={300} />
+                <Image src="/services/crossplatform_appdev.jpg" alt="Native Android Development" width={400} height={300} />
                 <div className="card-overlay">
                   <p className="overlay-text">Our Android development team creates powerful, scalable applications using Kotlin and Jetpack Compose that work seamlessly across the diverse Android ecosystem. We optimize for different screen sizes, Android versions, and device capabilities while implementing Material Design principles. Our apps integrate with Google services and leverage Android-specific features for enhanced functionality.</p>
                 </div>
@@ -80,7 +88,7 @@ export default function AppDevelopment() {
             {/* Cross-Platform Development */}
             <div className="enterprise-card">
               <div className="card-image">
-                <Image src="/services/react.png" alt="Cross-Platform Development" width={400} height={300} />
+                <Image src="/services/Custom_appdev.jpg" alt="Cross-Platform Development" width={400} height={300} />
                 <div className="card-overlay">
                   <p className="overlay-text">We develop cross-platform applications using React Native, Flutter, and Xamarin that work seamlessly across iOS and Android platforms. This approach reduces development time and costs while maintaining native performance. Our cross-platform solutions share up to 90% of code between platforms while still providing platform-specific optimizations and features.</p>
                 </div>
@@ -93,7 +101,7 @@ export default function AppDevelopment() {
             {/* Progressive Web Apps */}
             <div className="enterprise-card">
               <div className="card-image">
-                <Image src="/services/web-development.png" alt="Progressive Web Apps" width={400} height={300} />
+                <Image src="/services/enterprise_mobilesol.jpg" alt="Progressive Web Apps" width={400} height={300} />
                 <div className="card-overlay">
                   <p className="overlay-text">We build Progressive Web Apps (PWAs) that combine the best of web and mobile experiences. Our PWAs offer offline functionality, push notifications, and app-like performance while being easily accessible through web browsers. This approach provides a cost-effective solution for businesses looking to reach users across all devices without maintaining separate native apps.</p>
                 </div>
@@ -106,7 +114,7 @@ export default function AppDevelopment() {
             {/* UI/UX Design for Mobile */}
             <div className="enterprise-card">
               <div className="card-image">
-                <Image src="/services/UI:UX.jpeg" alt="Mobile UI/UX Design" width={400} height={300} />
+                <Image src="/services/appdev_UI.jpg" alt="Mobile UI/UX Design" width={400} height={300} />
                 <div className="card-overlay">
                   <p className="overlay-text">Our mobile UI/UX design team creates intuitive, engaging, and accessible interfaces that enhance user experience and drive engagement. We follow platform-specific design guidelines (Material Design for Android, Human Interface Guidelines for iOS) while creating unique brand experiences. Our designs prioritize usability, accessibility, and visual appeal across all device sizes.</p>
                 </div>
@@ -119,7 +127,7 @@ export default function AppDevelopment() {
             {/* App Store Optimization */}
             <div className="enterprise-card">
               <div className="card-image">
-                <Image src="/services/SEO_Digital_marketing.jpg" alt="App Store Optimization" width={400} height={300} />
+                <Image src="/services/appdev_optimization.jpg" alt="App Store Optimization" width={400} height={300} />
                 <div className="card-overlay">
                   <p className="overlay-text">We optimize your app for maximum visibility and downloads in the App Store and Google Play Store. Our ASO strategies include keyword optimization, compelling app descriptions, high-quality screenshots and videos, and positive user reviews. We also implement analytics and tracking to monitor app performance and user engagement metrics.</p>
                 </div>
@@ -132,7 +140,7 @@ export default function AppDevelopment() {
             {/* App Maintenance & Support */}
             <div className="enterprise-card">
               <div className="card-image">
-                <Image src="/services/website_maintainence.jpg" alt="App Maintenance & Support" width={400} height={300} />
+                <Image src="/services/appdev_testing.jpg" alt="App Maintenance & Support" width={400} height={300} />
                 <div className="card-overlay">
                   <p className="overlay-text">We provide comprehensive maintenance and support services to ensure your app continues to perform optimally. Our services include regular updates, bug fixes, performance monitoring, security patches, and feature enhancements. We also handle app store submissions and ensure compliance with the latest platform requirements and guidelines.</p>
                 </div>
@@ -145,7 +153,7 @@ export default function AppDevelopment() {
             {/* Backend Integration */}
             <div className="enterprise-card">
               <div className="card-image">
-                <Image src="/services/api_integeration.jpeg" alt="Backend Integration" width={400} height={300} />
+                <Image src="/services/appdev_support.jpg" alt="Backend Integration" width={400} height={300} />
                 <div className="card-overlay">
                   <p className="overlay-text">We develop robust backend systems and APIs that power your mobile applications. Our backend solutions include user authentication, data synchronization, push notifications, analytics, and third-party integrations. We ensure secure, scalable, and high-performance backend infrastructure that supports your app's growth and user demands.</p>
                 </div>
@@ -155,45 +163,20 @@ export default function AppDevelopment() {
                 <Link href="/contact" className="card-button">Get in Touch</Link>
               </div>
             </div>
-            {/* Mobile Security */}
-            <div className="enterprise-card">
-              <div className="card-image">
-                <Image src="/services/web_security.jpg" alt="Mobile Security" width={400} height={300} />
-                <div className="card-overlay">
-                  <p className="overlay-text">We implement comprehensive security measures to protect your app and user data. Our security practices include secure coding, data encryption, secure API communication, biometric authentication, and regular security audits. We ensure compliance with industry standards and regulations while protecting against common mobile security threats.</p>
-                </div>
-              </div>
-              <div className="card-content">
-                <h3 className="card-title">Mobile Security & Compliance</h3>
-                <Link href="/contact" className="card-button">Get in Touch</Link>
-              </div>
-            </div>
-            {/* Performance Optimization */}
-            <div className="enterprise-card">
-              <div className="card-image">
-                <Image src="/services/Perfromance_optimization.jpg" alt="Mobile Performance Optimization" width={400} height={300} />
-                <div className="card-overlay">
-                  <p className="overlay-text">We optimize your mobile app for maximum performance, battery efficiency, and user experience. Our optimization strategies include code optimization, image compression, lazy loading, caching mechanisms, and network optimization. We ensure your app loads quickly, uses minimal resources, and provides smooth interactions across all devices and network conditions.</p>
-                </div>
-              </div>
-              <div className="card-content">
-                <h3 className="card-title">Performance Optimization</h3>
-                <Link href="/contact" className="card-button">Get in Touch</Link>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
 
       {/* Full Image Sections */}
-      <section>
+      {/* <section>
         <div className="full-image">
           <Image src="/services/why_choose_deployed.png" alt="Why Choose Deployed" width={1200} height={400} />
         </div>
-      </section>
+      </section> */}
       <section>
         <div className="full-image">
-          <Image src="/services/our_web_process.png" alt="Our App Development Process" width={1200} height={400} />
+          <Image src="/services/appdev_agile.png" alt="Our App Development Process" width={1200} height={400} />
         </div>
       </section>
 
