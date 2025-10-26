@@ -47,6 +47,13 @@ def web_development(request):
     }
     return render(request, 'main/services/web_development.html', context)
 
+def app_development(request):
+    """App Development service page"""
+    context = {
+        'settings': settings,
+    }
+    return render(request, 'main/services/app_development.html', context)
+
 def careers(request):
     return render(request, 'main/careers.html')
 

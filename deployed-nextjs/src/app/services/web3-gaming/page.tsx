@@ -401,7 +401,14 @@ export default function Web3Gaming() {
         </div>
       </section>
 
-     
+      {/* Fixed CTA Section
+      <section className="fixed-cta-section">
+        <div className="fixed-cta-container">
+          <Link href="/contact" className="fixed-cta-button" id="fixedCtaButton">
+            Let&apos;s Talk Web3 Gaming
+          </Link>
+        </div>
+      </section> */}
     </>
   );
 } 

@@ -17,36 +17,37 @@ export default function ReCaptcha({ siteKey }: ReCaptchaProps) {
   useEffect(() => {
     if (!isClient || !recaptchaRef.current) return;
 
+    // Render reCAPTCHA when script is loaded
+    const renderRecaptcha = () => {
+      const grecaptcha = (window as unknown as { grecaptcha?: { render: (el: HTMLElement, opts: { sitekey: string }) => void, reset: () => void, getResponse: () => string, execute: () => void } }).grecaptcha;
+      if (grecaptcha && typeof grecaptcha.render === 'function' && recaptchaRef.current) {
+        try {
+          grecaptcha.render(recaptchaRef.current, {
+            sitekey: siteKey,
+          });
+        } catch (error) {
+          console.error('Error rendering reCAPTCHA:', error);
+        }
+      }
+    };
+
     // Load reCAPTCHA script if not already loaded
     if (!(window as unknown as { grecaptcha?: unknown }).grecaptcha) {
       const script = document.createElement('script');
       script.src = 'https://www.google.com/recaptcha/api.js';
       script.async = true;
       script.defer = true;
+      script.onload = () => {
+        // Script loaded, now render reCAPTCHA
+        renderRecaptcha();
+      };
+      script.onerror = () => {
+        console.error('Failed to load reCAPTCHA script');
+      };
       document.head.appendChild(script);
-    }
-
-    // Render reCAPTCHA when script is loaded
-    const renderRecaptcha = () => {
-      const grecaptcha = (window as unknown as { grecaptcha?: { render: (el: HTMLElement, opts: { sitekey: string }) => void, reset: () => void, getResponse: () => string, execute: () => void } }).grecaptcha;
-      if (grecaptcha && recaptchaRef.current) {
-        grecaptcha.render(recaptchaRef.current, {
-          sitekey: siteKey,
-        });
-      }
-    };
-
-    // Check if grecaptcha is already available
-    if ((window as unknown as { grecaptcha?: unknown }).grecaptcha) {
-      renderRecaptcha();
     } else {
-      // Wait for script to load
-      const checkGrecaptcha = setInterval(() => {
-        if ((window as unknown as { grecaptcha?: unknown }).grecaptcha) {
-          clearInterval(checkGrecaptcha);
-          renderRecaptcha();
-        }
-      }, 100);
+      // Script already loaded, render immediately
+      renderRecaptcha();
     }
   }, [isClient, siteKey]);
 

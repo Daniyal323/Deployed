@@ -104,14 +104,14 @@
         
         <!-- First Row (Always Visible) -->
         <div class="services-grid services-row" id="services-row-1">
-            <div class="service-card">
+            <a href="{% url 'main:web_development' %}" class="service-card">
                 <img src="{% static 'services/web-development.png' %}" alt="Web Development" class="service-image">
                 <h3 class="service-name">Web Development</h3>
-            </div>
-            <div class="service-card">
+            </a>
+            <a href="{% url 'main:app_development' %}" class="service-card">
                 <img src="{% static 'services/mobile-app-development.webp' %}" alt="Mobile Apps" class="service-image">
                 <h3 class="service-name">Mobile Apps</h3>
-            </div>
+            </a>
             <div class="service-card">
                 <img src="{% static 'services/cloud-services.webp' %}" alt="Cloud Solutions" class="service-image">
                 <h3 class="service-name">Cloud Solutions</h3>

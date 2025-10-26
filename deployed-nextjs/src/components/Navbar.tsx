@@ -127,7 +127,7 @@ export default function Navbar() {
                   <strong>Digital Transformation</strong>
                   <ul>
                     <li><Link href="/services/web-development">Web development</Link></li>
-                    <li><Link href="/services">Mobile App Development</Link></li>
+                    <li><Link href="/services/app-development">Mobile App Development</Link></li>
                     <li><Link href="/services">Custom Software Development</Link></li>
                     <li><Link href="/services">UX/UI Design</Link></li>
                   </ul>
